@@ -1,0 +1,115 @@
+/* reset */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before,*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* typography */
+
+body {
+    background-color: #FDFFFC;
+    color: #474646;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+    font-family: 'Crimson Text', serif;
+}
+
+/* layout */
+
+.container {
+    margin: 0 20px;
+}
+
+#site-header {
+    /* position: fixed;
+    top: 0;
+    width: 100%; */
+}
+
+@media (min-width: 1024) {
+    #site-header {
+        display: flex;
+    }
+}
+
+/* components */
+
+/* header*/
+
+header {
+    background-color: #FDFFFC;
+    overflow: hidden;
+    line-height: 40px;
+    padding: 10px;
+}
+
+h1 {
+    /* color: #474646; */
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#site-header nav {
+    display: flex;
+    justify-content: center; 
+}
+
+#site-header nav a {
+    padding-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px; 
+    color: #474646;
+    text-decoration: none;
+}
+
+#site-header nav a:last-child {
+    padding-right: 0px;
+}
+
+.presentation {
+    position: relative;
+    width: 100%;;
+}
+
+.presentation-text {
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    top: 20%;
+    right: 50%;
+}
+
+.experiments {
+    background-color: #F71735;
+}
+
+/* todo fix menu, position title, h2, images, articles etc etc etc */
