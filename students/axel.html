@@ -6,35 +6,69 @@
   <title>Axel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./axel.css">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
 </head>
 
 <body>
-  <a href="../index.html">Homepage</a>
-  <h1>Cohort 08 2018</h1>
-  <main>
-    <section>
-      <h2>Axel</h2>
-      <img src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&h=350">
-      <p> web developer from <em> Barcelona, Spain</em></p>
-      <h3>interests</h3>
-      <ul>
-        <li>Board Games</li>
-        <li>Traveling</li>
-        <li>Technology</li>
-        <li>Music</li>
-      </ul>
+  <header id="site-header">
+    <nav class="site-nav container">
+      <h1>Cohort 08 2018</h1>
+      <div class="button">
+        <a href="../index.html">Homepage</a>
+      </div>
+    </nav>
+  </header>
+  <main id="site-main">
+    <section class="general-information section">
+        <h2>Axel</h2>
+        <div class="main-image">
+           <img src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&h=350">
+        <div class="container ">
+        <p> Web developer from <em> Barcelona, Spain</em></p>
+        </div>
+        <div class="container ">
+          <h3>Interests</h3>
+          <ul class="interests">
+            <li>
+              <ul>
+                <li>Games</li>
+                <li><img src="https://image.flaticon.com/icons/svg/1057/1057316.svg" alt="Games-Icon"> </li>
+              </ul> 
+            </li>
+            <ul>
+              <li>Cinema</li>
+              <li><img src="https://image.flaticon.com/icons/svg/1057/1057314.svg" alt="Cinema-Icon"></li>
+            </ul>
+            <li>
+              <ul>
+                <li>Technology</li>
+                <li><img src="https://image.flaticon.com/icons/svg/1057/1057320.svg" alt="Technology-Icon"></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>Coffee</li>
+                <li><img src="https://image.flaticon.com/icons/png/512/1057/1057359.png" alt="Coffee-Icon"></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
-    <section class="experiments">
-      <h2>Experiments</h2>
-      <article class="card">
-        <h3>JS algorithms</h3>
-        <p>My first experiments with variables, conditionals and loops</p>
-        <p><a href="">View in Github</a></p>
-        <footer role="contentinfo">
-          <p>Created on: 08/30/2018</p>
-        </footer>
-      </article>
+    <section class="experiments section">
+      <div class="container ">
+        <h2>Experiments</h2>
+        <article>
+          <h3>JS algorithms</h3>
+          <p>My first experiments with variables, conditionals and loops:</p>
+          <p class="button button-inverted"><a href="https://github.com/axelgar/lab-javascript-basic-algorithms">View in Github</a></p>
+        </article>
+      </div>
     </section>
   </main>
+  <footer id="site-footer" role="contentinfo">
+    <p>Created on: 08/30/2018</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,177 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+  font-family: 'Concert One';
+}
+
+h1 {
+  margin: auto 0;
+  font-size: 5vw;
+}
+
+h2 {
+  color: #f0eceb; 
+}
+
+h3 {}
+
+p {
+  margin: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.experiments a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* ---- layout ---- */
+
+#site-header {
+  padding: 15px 0;
+  color: white;
+  background: #729f98;
+}
+
+#site-footer {
+  color: white;
+  padding: 10px 0;
+  background: black;
+  text-align: end;
+}
+
+#site-main {
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.section {
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+
+
+
+/* ---- components ---- */
+
+.button {
+  padding: 5px;
+  background-color: #729f98;
+  color: #283018;
+  border: 2px solid #283018;
+  border-radius: 5px;
+}
+
+.button-inverted {
+  padding: 5px;
+  background-color: #283018;
+  color: #729f98;
+  border: 1px #283018;
+  border-radius: 5px;
+}
+
+header .site-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .general-information {
+  background-color: #f0eceb;
+  position: relative;
+  padding: 0;
+}
+
+.general-information h2 {
+  margin: 0;
+  position: absolute;
+  z-index: 50;
+  top: 5%;
+  right: 45%;
+  font-size: 5vw;
+}
+
+.general-information img {
+  width: 100%;
+}
+
+.main-image {
+  margin: 0;
+}
+h3.container{
+  padding-bottom: 10px;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.interests li {
+  max-width: 75px;
+  flex: 1;
+  text-align: center;
+  margin: 0 5px;
+}
+
+main .experiments {
+  background-color: #729f98;
+}
+
+.experiments .container {
+  padding-bottom: 10px;
+}
+
+.experiments p {
+  padding-bottom: 10px;
+}
+
+footer p {
+  font-size: 12px;
+}
