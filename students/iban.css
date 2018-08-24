@@ -1,0 +1,49 @@
+html {
+    box-sizing:  border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/*typography*/
+
+body {
+    background: black;
+    color: white;
+}
+
+/*layout*/
+
+.container {
+    margin: 0 20px;
+}
+
+/*components*/
+
+header {
+    background: white;
+    color: blue;
+    overflow: hidden;
+    line-height: 40px; /*inheritance*/
+    padding: 10px;
+}
+
+h1{
+    float: left;
+    font-size: 34px;
+    margin: 0;
+}
+
+nav {
+    float: right;
+}
+
+.experiments{
+    background-color: white;
+    color: black;
+}
