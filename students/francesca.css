@@ -20,6 +20,10 @@ body {
     color: #474646;
 }
 
+h1, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -28,15 +32,20 @@ h1 {
 }
 
 h2 {
+    color: #474646;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
 
+h2, p {
+    font-family: 'Crimson Text', serif;
 }
 
 h3 {
-
-}
-
-p {
-    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 /* layout */
@@ -46,15 +55,24 @@ p {
 }
 
 #site-header {
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    width: 100%; */
+    width: 100%;
+    z-index: 3;
+}
+
+#site-main {
+    padding-top: 100px;
 }
 
 @media (min-width: 1024) {
     #site-header {
         display: flex;
     }
+}
+
+img {
+    width: 100%;
 }
 
 /* components */
@@ -97,19 +115,45 @@ h1 {
 
 .presentation {
     position: relative;
-    width: 100%;;
+    width: 100%;
 }
 
-.presentation-text {
-    position: absolute;
+section.profile .presentation-text {
     text-align: center;
-    z-index: 10;
+    /* position: absolute;
+    z-index: 2;
     top: 20%;
-    right: 50%;
+    left: 50%; */
+    /* background-color: #FDFFFC;
+    opacity: 0.7; */
+    padding: 10px;
+    margin-bottom: 40px;
 }
+
+#interests h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#interests ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#interests ul li {
+    list-style: none;
+}
+
+@media (min-width: 700px) {
+    #interests ul li {
+        width: 33%;
+    }
+}
+
 
 .experiments {
     background-color: #F71735;
 }
 
-/* todo fix menu, position title, h2, images, articles etc etc etc */
+/* todo position title, h2, images, image max-width articles etc etc etc */
