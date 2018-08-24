@@ -5,26 +5,42 @@
   <title>Francesca</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./francesca.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600" rel="stylesheet">
 </head>
 
 <body>
-  <a href="../index.html">Homepage</a>
-  <h1>Cohort 08 2018</h1>
-  <main>
+  <header id="site-header">
+    <h1>Cohort 08 2018</h1>
+    <nav>
+        <a href="../index.html">Homepage</a>
+        <a href="#interests">Interests</a>
+        <a href="#experiments">Experiments</a>
+    </nav>
+  </header>
+  
+  <main id="site-main">
     <section class="profile">
-      <h2>Francesca</h2>
-      <img src="https://www.focus.it/site_stored/imgs/0003/040/corbis_42-23842348_web.630x360.jpg" alt="A beautiful picture of me" width="320">
-      <p>Web developer from <em>Turin, Italy</em></p>
-      <h3>Interests</h3>
-      <ul>
-        <li>Napping</li>
-        <li>Food</li>
-        <li>Dogs</li>
-      </ul>
+      <div class="presantation">
+        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7b2a0b01d0e292a6569901818e4fafd9&auto=format&fit=crop&w=2590&q=80" alt="A beautiful picture of me" width="100%">
+          <div class="presentation-text">
+            <h2>Francesca</h2>
+            <p>Web developer from <em>Turin, Italy</em></p>
+          </div>
+      </div>
+      <div id="interests" class="container">
+        <h3>Interests</h3>
+        <ul>
+          <li><img src="https://images.unsplash.com/photo-1517898717281-8e4385a41802?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3fae9d045f631e72d1f00740eb52ade0&auto=format&fit=crop&w=2550&q=80" alt="A girl napping"></li>
+          <li><img src="https://images.unsplash.com/photo-1514995428455-447d4443fa7f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d3a7081424acd0c6fa99f2e541d5648&auto=format&fit=crop&w=900&q=60" alt="Food"></li>
+          <li><img src="https://images.unsplash.com/photo-1494913148647-353ae514b35e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=690fde360cf073d36a84808c5f655c0e&auto=format&fit=crop&w=2552&q=80" alt="Two dogs on an amaca"></li>
+        </ul>
+      </div> 
     </section>
-    <section class="experiments">
-      <h2>Experiments</h2>
-      <article class="card">
+    <section id="experiments" class="experiments">
+      <h2 class="container">Experiments</h2>
+      <article class="card container">
         <h3>JS Algorithms</h3>
         <p>Descrition: my first experiment with variables, conditionals and loops</p>
         <p><a href="#">View on GitHub</a></p>
@@ -34,5 +50,8 @@
       </article>
     </section>
   </main>
+  <footer id="site-footer">
+    <p>My little site</p>
+  </footer>
 </body>
 </html>
