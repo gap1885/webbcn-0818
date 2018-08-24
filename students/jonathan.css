@@ -1,0 +1,131 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+
+h1 {
+  font-size: 10vw;
+  line-height: 150%;
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: grey;
+}
+
+h2 {
+  font-size: 6vw;
+  margin-bottom: 20px;
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e54009;
+}
+
+h3 {}
+
+p {
+  margin: 0;
+  text-align: center;
+}
+
+
+
+/* ---- layout ---- */
+
+#site-header {
+  line-height: 40px;
+  padding-top: 50px;
+  margin-bottom: 20px;
+
+}
+
+#site-footer {
+  color: white;
+  padding: 60px 0;
+  background: #111;
+}
+
+#site-main {
+  margin-bottom: 60px;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* ---- components ---- */
+
+.button {
+  display: block;
+  background-color: #e54009;
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.overview img {
+  clip-path: circle(150px at center);
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.card {
+  display: block;
+  background-color: #273c58;
+  box-shadow: 12px 12px 40px 2px #888888;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.card a {
+  text-decoration: none;
+  color: white;
+}
