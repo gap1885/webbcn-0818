@@ -1,0 +1,49 @@
+/* reset */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* typography */
+
+body {
+  background: pink;
+  color: blue; /* inheritance */
+}
+
+/* layout */
+
+.container {
+  margin: 0 20px;
+}
+
+header {
+  background: rosybrown;
+  overflow: hidden;
+  line-height: 40px; /* inheritance */
+  padding: 10px;
+}
+
+h1 {
+  float: left;
+  font-size: 34px; 
+  margin: 0;
+}
+
+nav {
+  float: right;
+}
+
+/* components */
+
+.experiments {
+  background-color: orangered;
+}
