@@ -108,7 +108,7 @@ p {
 @media (min-width: 1024px) {
   .container {
     max-width: 984px;
-    margin: 0 auto;
+     margin: auto;
   }
 }
 
