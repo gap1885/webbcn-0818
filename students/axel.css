@@ -81,6 +81,7 @@ p {
 #site-header {
   padding: 15px 0;
   color: white;
+  background-color: white;
 }
 
 #site-footer {
@@ -165,6 +166,13 @@ main .general-information {
   margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  .general-information .main-image {
+    height: 512px;
+    overflow: hidden;
+  }
+}
+
 h3.container{
   padding-bottom: 10px;
 }
@@ -181,10 +189,6 @@ h3.container{
   text-align: center;
   margin: 0 5px;
   padding-bottom: 10px;
-}
-
-section.experiments {
-  background-color:;
 }
 
 section.experiments .container {
