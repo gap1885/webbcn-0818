@@ -87,7 +87,7 @@ h3 {
 
 #site-footer {
   color: white;
-  padding: 10px;
+  padding: 10px 0px;
   background:  black;
   text-align: end;
   display: flex;
@@ -220,6 +220,10 @@ section.experiments p {
 
 .experiments p, h4{
   padding: 15px;
+}
+
+.experiments img {
+  width: 15px;  
 }
 
 #site-footer img {
