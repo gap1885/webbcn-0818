@@ -23,6 +23,10 @@ body {
     margin: 0 20px;
 }
 
+.profile .info {
+    display: flex;
+} 
+
 /*components*/
 
 header {
