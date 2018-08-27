@@ -1,0 +1,188 @@
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #696969;
+}
+
+/* ---- typography ---- */
+
+body {
+  color: #949794;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 27px;
+}
+
+h2 {
+  font-size: 22px;
+  text-align: center;
+
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+}
+h4 {
+  font-size: 14px;
+
+}
+
+p {
+  margin: 0;
+}
+
+
+
+/* ---- layout ---- */
+
+#site-header {
+  color: white;
+  background: #C9D6D5;
+  width: 100%;
+}
+
+
+#site-main {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+#site-footer {
+  color: white;
+  background: #C9D6D5;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 1024px;
+}
+
+section {
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+
+      /* ---- components ---- */
+/* ----components - header - nav----- */
+
+
+div.homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+ul.site-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ----components - profile----- */
+
+
+section.profile{
+  display: flex;
+  justify-content: space-around;
+}
+
+section.profile .profile-picture {
+  order: -1;
+  padding: 10px;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  animation: 4s poly infinite alternate ease-in-out;
+}
+@keyframes poly {
+  from {
+    clip-path: polygon(40% 0, 100% 40%, 60% 100%, 0 60%)
+      }
+    to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+      }
+}
+/* ----components - interests----- */
+
+section.interests {
+  background-color:#f5f5f5;
+  background-image: url(https://a.slack-edge.com/1fd8/spacesuit/source/images/backgrounds/bg_halftone_black_30p@2x.png);
+  background-size: 100% auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+div.interest-articles {
+  display: flex;
+  align-content: center;
+}
+
+section.interests img {
+  clip-path: circle(38%);
+}
+/* ----components - experiments----- */
+
+div.experiments-groups  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.experiments-articles {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----components - footer----- */
+section.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin: 0;
+}
+
+
+
+/* colors:
+green#C4E5DB
+gray greenish #949794
+light gray #FFFFFF
+C9D6D5
+EAF6F5
+  overflow: scroll;
+
+*/
+/* ----components - interests----- */
+
+/* ----components - experiments----- */
+
