@@ -73,7 +73,6 @@ p {
 #site-footer {
   color: white;
   background: #C9D6D5;
-  padding: 
 }
 
 .container {
@@ -126,7 +125,6 @@ section.profile .profile-picture {
   animation: 4s poly infinite alternate ease-in-out;
 }
 @keyframes poly {
-  
   from {
     clip-path: polygon(40% 0, 100% 40%, 60% 100%, 0 60%)
       }
