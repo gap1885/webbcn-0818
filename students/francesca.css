@@ -261,7 +261,7 @@ section.experiments .content.expanded {
 }
 
 .desplegable .expand img,
-.desplegable .expanded img {
+.desplegable .hide img {
     width: 12px;
 }
 
@@ -272,15 +272,8 @@ section.experiments .expand {
 
 section.experiments .collapse {
     display: none;
-}
-
-section.experiments .expand.expanded {
-    display: none;
-}
-
-section.experiments .collapse.expanded {
-    display: inline;
     cursor: pointer;
 }
+
 
 /* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc */
