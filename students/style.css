@@ -1,0 +1,196 @@
+/*reset*/
+html {
+    box-sizing: border-box;
+    
+}
+*, *:before, *after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;    
+}
+@media (min-width: 768px) {
+    .container {
+      max-width: 728px;
+      margin: 0 auto;
+    }
+}
+
+/*Typo*/
+body { 
+        margin: 0; 
+        background-image: url("http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-045.jpg")   
+}
+
+.container {
+    padding: 1rem 1.5rem;
+    
+}
+
+/*Nav Bar*/
+header {
+    width: 100%;
+    overflow: hidden;
+    /* height: 70px; */
+    position: relative;
+}
+ 
+/* nav {
+        top:-30px;
+    position: absolute;
+    left:0;
+    right:0;
+	margin:20px 0;
+    width:100%;
+    opacity: 1;
+} */
+ 
+nav ul {
+	list-style:none;
+}
+ 
+nav > ul {
+	display:table;
+	width:100%;
+	background:orange;
+	position:relative;
+}
+ 
+nav > ul li {
+	display:table-cell;
+}
+ 
+nav > ul li a {
+	color:#fff;
+	display:block;
+	line-height:20px;
+	padding:20px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+
+nav > ul > li > a span {
+	background:#174459;
+	display:block;
+	height:100%;
+	width:100%;
+	left:0;
+	position:absolute;
+	top:-55px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+ 
+nav li a .icon {
+    color:white;
+    display: block;
+    line-height: 60px;
+}
+ 
+nav > ul > li > a:hover > span {
+	top:0;
+}
+ 
+/*Colores*/
+nav ul li a .primero {
+    background:orange;
+
+}
+ 
+nav ul li a .segundo {
+	background:#5da5a2;
+}
+ 
+nav ul li a .tercero {
+	background:#f25724;
+}
+ 
+nav ul li a .cuarto {
+    background:#0e5061;
+
+}
+ 
+nav ul li a .quinto {
+    background:lightpink;
+    
+}
+nav ul li a .sexto {
+    background:lightgreen;
+    
+}
+
+/*Main*/
+main {
+}
+/*Banner*/
+section.banner div{
+    background-image: url();
+    margin: 0 auto;
+    color:wheat ;
+    text-align: center;
+}
+
+section.banner div h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+section.banner div h1 strong {
+    color: red;
+}
+
+/*Section ABOUT*/
+
+main img.me{
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto; 
+    width: 100%;   
+}
+section.about{
+    background-color:rgba(228, 190, 215, 0.274);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+section.about p {
+    padding: 20px; 
+}
+section.about h2 {
+    padding: 15px;
+}
+section.hobbies article.interests img {
+    border-radius: 100px;
+    height: 100px;
+    padding: 10px 30px;
+}
+section.hobbies h3{
+    padding: 10px;
+}
+
+section.hobbies .wrap{
+    padding: 10px 0;
+    
+}
+section.about ul li{
+    list-style: none;
+
+}
+/*Wrap*/
+.box{ 
+    width: 60%;
+    margin: 0 auto;
+}
+
