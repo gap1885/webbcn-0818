@@ -250,8 +250,37 @@ section.experiments footer {
 	text-indent: -9999px;
 }
 
+/**** component ****/
 
+section.experiments .content {
+    display: none;
+}
 
+section.experiments .content.expanded {
+    display: block;
+}
 
+.desplegable .expand img,
+.desplegable .expanded img {
+    width: 12px;
+}
+
+section.experiments .expand {
+    display: inline;
+    cursor: pointer;
+}
+
+section.experiments .collapse {
+    display: none;
+}
+
+section.experiments .expand.expanded {
+    display: none;
+}
+
+section.experiments .collapse.expanded {
+    display: inline;
+    cursor: pointer;
+}
 
 /* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc */
