@@ -13,6 +13,26 @@ body {
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+h4{
+  margin: 0;
+}
+
+
 
 /* ---- typography ---- */
 
@@ -26,17 +46,20 @@ body {
 
 h1 {
   margin: auto 0;
-  font-size: 5vw;
+  font-size: 25px;
+  color: #3f51b5;
 }
 
 h2 {
-  color: #f0eceb; 
+  color: #f0eceb;
+  font-size: 30px; 
+  text-transform: uppercase;
+  text-align: center;
 }
 
-h3 {}
-
-p {
-  margin: 0;
+h3 {
+  color: #3f51b5;
+  text-transform: uppercase;
 }
 
 .site-nav a {
@@ -51,22 +74,26 @@ p {
 }
 
 
+
 /* ---- layout ---- */
 
 #site-header {
   padding: 15px 0;
   color: white;
-  background: #729f98;
+  background-color: white;
+  position: sticky;
+  top: 0;
 }
 
 #site-footer {
   color: white;
-  padding: 10px 0;
-  background: black;
+  padding: 10px 0px;
+  background:  black;
   text-align: end;
-}
-
-#site-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
 .container {
@@ -77,44 +104,36 @@ p {
   padding-top: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .container {
-    max-width: 728px;
-    margin: 0 auto;
+    max-width: 984px;
+     margin: auto;
   }
 }
-
-ul {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  margin: 0;
-}
-
 
 
 
 /* ---- components ---- */
 
 .button {
-  padding: 5px;
-  background-color: #729f98;
-  color: #283018;
-  border: 2px solid #283018;
+  padding: 10px;
+  background-color:white;
+  color:  #3f51b5;
+  border: 2px solid white;
   border-radius: 5px;
 }
 
 .button-inverted {
   padding: 5px;
-  background-color: #283018;
+  background-color: #3f51b5;
   color: #729f98;
-  border: 1px #283018;
+  border: 1px #3f51b5;
   border-radius: 5px;
 }
+
+
+
+/* Sections */
 
 header .site-nav {
   display: flex;
@@ -123,26 +142,36 @@ header .site-nav {
 
 main .general-information {
   background-color: #f0eceb;
-  position: relative;
   padding: 0;
+  border-radius: 10px;
 }
 
-.general-information h2 {
+.general-information h2{
   margin: 0;
-  position: absolute;
-  z-index: 50;
-  top: 5%;
-  right: 45%;
-  font-size: 5vw;
+  font-size: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.general-information p.container{
+  text-align: center;
+  margin-top: 20px;
 }
 
 .general-information img {
   width: 100%;
+  margin: 0;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-.main-image {
-  margin: 0;
+@media (min-width: 768px) {
+  .general-information .main-image {
+    height: 512px;
+    overflow: hidden;
+  }
 }
+
 h3.container{
   padding-bottom: 10px;
 }
@@ -158,20 +187,46 @@ h3.container{
   flex: 1;
   text-align: center;
   margin: 0 5px;
-}
-
-main .experiments {
-  background-color: #729f98;
-}
-
-.experiments .container {
   padding-bottom: 10px;
 }
 
-.experiments p {
+section.experiments .container {
   padding-bottom: 10px;
 }
 
-footer p {
-  font-size: 12px;
+section .list-articles{
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.experiments article{
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .experiments article {
+    width: 47%;
+    margin: 10px;
+  }
+}
+
+section.experiments p {
+  padding-bottom: 10px;
+}
+
+.experiments p, h4{
+  padding: 15px;
+}
+
+.experiments img {
+  width: 15px;  
+}
+
+#site-footer img {
+  padding: 0 5px;
+  width: 40px;
 }
