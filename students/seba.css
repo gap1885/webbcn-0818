@@ -11,12 +11,16 @@ body {
   margin: 0;
 }
 
+li  {
+  list-style: none;
+}
+
 
 /* typography */
 
 body {
-  background: pink;
-  color: blue; /* inheritance */
+  background: white;
+  color: black; /* inheritance */
 }
 
 /* layout */
@@ -26,7 +30,7 @@ body {
 }
 
 header {
-  background: rosybrown;
+  background: orange;
   overflow: hidden;
   line-height: 40px; /* inheritance */
   padding: 10px;
@@ -45,5 +49,67 @@ nav {
 /* components */
 
 .experiments {
-  background-color: orangered;
+  background-color: orange;
+  padding: 20px 0;
+}
+
+.quick-nav {
+  padding: 10px;
+  text-align: center;
+
+} 
+
+.quick-nav .search label {
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.quick-nav .search input {
+  padding-left: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.quick-nav label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.quick-nav .search {
+  position: relative;
+  display: inline-block;
+}
+
+.quick-nav .search-results {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  text-align: left;
+  background-color: rgba(255, 166, 0, 0.714);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.quick-nav .search-results ul {
+  margin: 0;
+  padding: 0;
+}
+
+.quick-nav .search-results li {
+  margin-bottom: 2px;
+}
+
+.quick-nav .search-results a {
+  display: block;
+  color: aquamarine;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.quick-nav .search-results a:hover {
+  background-color: red;
 }

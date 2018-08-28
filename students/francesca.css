@@ -71,7 +71,7 @@ p {
 }
 
 #site-main {
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 @media (min-width: 1024) {
@@ -284,4 +284,60 @@ section.experiments .is-expanded .collapse {
     display: inline;
 }
 
-/* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc nav shadow*/
+/* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc nav shadow input:focusssss*/
+
+
+/* posiciona bien y despues pon el div dentro del nav con icono lupa */
+
+.sub-header {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.sub-header label {
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 30px;
+}
+
+.sub-header .search {
+    padding-top: 10px;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.sub-header .search input {
+    border: 1px solid #474646;
+    padding: 10px 15px;
+}
+
+.sub-header .search-results {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.sub-header .search-results ul {
+    background-color: #474646;
+    
+}
+
+.sub-header .search-results li {
+    list-style: none;
+}
+
+.sub-header .search-results a{
+    text-decoration: none;
+    color: #D4D5D4;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    padding: 10px 15px;
+}
+
+.sub-header .search-results a:hover{
+    background-color: #D4D5D4;
+    color: #474646;
+}
