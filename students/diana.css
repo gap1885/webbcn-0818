@@ -138,8 +138,19 @@ section.interests {
   background-image: url(https://a.slack-edge.com/1fd8/spacesuit/source/images/backgrounds/bg_halftone_black_30p@2x.png);
   background-size: 100% auto;
   padding-bottom: 30px;
-  text-align: center;
 }
+
+section.interests div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section.interests article{
+  width: 25%;
+
+}
+
 
 section.interests .articles {
   display: flex;
@@ -151,13 +162,18 @@ section.interests img {
 }
 /* ----components - experiments----- */
 
-section.experiments .article{
-  display: block;
-}
 
 section.experiments div article {
   padding-top: 10px;
   margin-bottom: 10px;
+}
+
+section.experiments div article.hidden {
+  display: none;
+}
+
+section.experiments div article.expanded{
+  display: block; 
 }
 
 section.experiments div article.html {
