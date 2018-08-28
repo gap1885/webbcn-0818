@@ -119,10 +119,9 @@ section.profile{
 }
 
 section.profile .profile-picture {
-  order: -1;
-  padding: 10px;
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   animation: 4s poly infinite alternate ease-in-out;
+  width: 50%;
 }
 @keyframes poly {
   from {
@@ -142,7 +141,7 @@ section.interests {
   text-align: center;
 }
 
-div.interest-articles {
+section.interests .articles {
   display: flex;
   align-content: center;
 }
@@ -152,16 +151,31 @@ section.interests img {
 }
 /* ----components - experiments----- */
 
-div.experiments-groups  {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+section.experiments .article{
+  display: block;
 }
 
-div.experiments-articles {
-  display: flex;
-  justify-content: center;
+section.experiments div article {
+  padding-top: 10px;
+  margin-bottom: 10px;
 }
+
+section.experiments div article.html {
+  content: url("http://thewebrocks.com/demos/html5-3d-css/html5.png");
+  width: 20%;
+}
+
+section.experiments div article.css {
+  content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/2000px-CSS3_logo_and_wordmark.svg.png");
+  width: 70px;
+}
+
+section.experiments div article.javaScript {
+  content: url("https://i2.wp.com/kingphiliptrailriders.com/wpinhere/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500");
+  width: 20%;
+}
+
+
 
 /* ----components - footer----- */
 section.footer {
