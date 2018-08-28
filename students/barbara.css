@@ -1,0 +1,119 @@
+/* reset */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+/* typography*/
+
+body {
+    background: white;
+    color: dark-brown; /* inheritance */
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+h2, h3 {
+    font-size: 18px;
+    text-align: left;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+/* layout */
+.heart {
+    color: grey;
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 20px;
+}
+
+.img p {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.image img {
+    position: relative;
+
+}
+
+/* components */
+
+ul.top-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-links li {
+    list-style-type: none;
+}
+
+.block-color {
+    background-color: #AC3B61;
+}
+
+.btn-navigation {
+    width: 100%;
+    color: grey;
+    text-decoration: none;
+    border-width: 6px;
+    border-radius: 4px;
+    display: block;
+    padding: 20px;
+}
+
+ .github-link.btn-navigation {
+    width: 100%;
+    color: #FF851B;
+    display: inline-block;
+}
+
+section.experiments {
+    color: #FF851B;
+    background-color: #222f3e;
+    padding-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+    text-align: right;
+}
+
+section p {
+    font-size: 17px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
