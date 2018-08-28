@@ -13,4 +13,4 @@ function main() {
   };
 }
 
-document.addEventListener('load', main);
+window.addEventListener('load', main);
