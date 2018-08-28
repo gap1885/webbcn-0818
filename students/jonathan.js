@@ -21,7 +21,6 @@ function navButton() {
 
   for (var ix = 0; ix < nodes.length; ix++) {
     nodes[ix].addEventListener('click', function (event) {
-      console.log('jonathan king');
       var h3 = event.currentTarget;
       var nav = h3.parentNode;
       // var list = nav.querySelector('ul')
