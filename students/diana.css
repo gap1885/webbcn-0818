@@ -151,12 +151,8 @@ section.interests img {
 }
 /* ----components - experiments----- */
 
-section.experiments div h3 {
-}
-
-
-.hidden{
-
+section.experiments .article{
+  display: block;
 }
 
 section.experiments div article {
