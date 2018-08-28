@@ -64,13 +64,11 @@ h3 {
 
 .site-nav a {
   text-decoration: none;
-  color: white;
   font-size: 20px;
 }
 
 .experiments a {
   text-decoration: none;
-  color: white;
 }
 
 
@@ -116,7 +114,7 @@ h3 {
 /* ---- components ---- */
 
 .button {
-  padding: 10px;
+  padding: 5px;
   background-color:white;
   color:  #3f51b5;
   border: 2px solid white;
@@ -126,11 +124,14 @@ h3 {
 .button-inverted {
   padding: 5px;
   background-color: #3f51b5;
-  color: #729f98;
-  border: 1px #3f51b5;
+  color: white;
+  border: 2px solid #3f51b5;
   border-radius: 5px;
 }
 
+.hide {
+  display: none;
+}
 
 
 /* Sections */
@@ -220,6 +221,10 @@ section.experiments p {
 
 .experiments p, h4{
   padding: 15px;
+}
+
+.experiments h4{
+  cursor: pointer;
 }
 
 .experiments img {
