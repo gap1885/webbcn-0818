@@ -23,31 +23,62 @@ body {
   line-height: 147%;
 }
 
+h1, h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
 
 h1 {
-  font-size: 10vw;
+  font-size: 24px;
   line-height: 150%;
   margin: 0;
-  font-family: 'Muli', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
   color: grey;
 }
 
 h2 {
-  font-size: 6vw;
+  font-size: 32px;
   margin-bottom: 20px;
-  font-family: 'Muli', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
   color: #e54009;
+  line-height: 150%;
 }
 
-h3 {}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
 
 p {
   margin: 0;
   text-align: center;
+}
+
+a {
+  color: #414141;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+}
+
+a:hover {
+  color: #e54009
+}
+
+/* typo specifics */
+
+.nav-bar{
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-bar li a {
+  text-transform: lowercase;
+}
+
+.overview ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
 
 
@@ -92,6 +123,14 @@ p {
 
 /* ---- components ---- */
 
+.nav-bar {
+  text-align: center;
+}
+
+nav.hidden .nav-bar {
+  display: none;
+}
+
 .button {
   display: block;
   background-color: #e54009;
@@ -106,8 +145,25 @@ p {
   text-transform: uppercase;
 }
 
+h3.menu-button {
+  background-color: white;
+  border: 2px solid #e54009;
+  width: 44px;
+  height: 100%;
+  padding: 0;
+  border-radius: 50%;
+  color: #e54009;
+  margin-bottom: 5px; 
+  cursor: pointer;
+}
+
+.divider {
+  width: 70%;
+}
+
 .overview img {
-  clip-path: circle(150px at center);
+  clip-path: circle(40% at center);
+  width: 250px;
   margin: 0 auto;
   text-align: center;
   display: block;
