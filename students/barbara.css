@@ -111,9 +111,11 @@ section p {
     font-size: 17px;
 }
 
-.hide {
+.experiments .card {
     display: none;
 }
 
-
+.experiments.expanded .card {
+    display: block;
+}
 
