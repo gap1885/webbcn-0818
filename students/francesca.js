@@ -11,6 +11,8 @@
       })
     }
 
+    // ------- quick jump
+
     var input = document.querySelector('.sub-header input');
     input.addEventListener('keyup', handleChange);
 
@@ -26,9 +28,7 @@
     };
 
     function displayResults(results) {
-      var searchResults =  document.querySelector('.sub-header .search-results');
-      searchResults.innerHTML = '';
-
+      event.stopPropagation()
       if (!results.length) {
         return;
       }
@@ -58,6 +58,83 @@
       displayResults(results)
       
     };
+
+
+    var searchResults =  document.querySelector('.sub-header .search-results');
+    
+    document.body.addEventListener('click', function() {
+      searchResults.innerHTML = '';
+    });
+
+    document.body.addEventListener('keyup', function() {
+      if (e.which == 27) {
+        searchResults.innerHTML = '';
+      }
+    });
+
+    input.addEventListener('click', function(event) {
+      event.stopPropagation(event);
+    });
+
+    input.addEventListener('focus', handleChange);
+
+    
+
+    // ------- timer
+
+    // var timer = document.querySelector('.timer');
+
+    // var spanTimer = document.createElement('span');
+
+    // var timeLeft = 30;
+    // spanTimer.innerText = timeLeft;
+
+    // console.log(timeLeft);
+    // var intervalId = setInterval(function() {
+    //   if (timeLeft) {
+    //     timeLeft--;
+    //     console.log(timeLeft)
+    //   } else {
+    //     clearInterval(intervalId);
+    //   }
+    //   spanTimer.innerText = timeLeft;
+    // }, 1000);
+
+    // timer.appendChild(spanTimer);
+
+    
+    if (window.confirm("Do you want to play? You have to guess what is my favorite interest in 10 seconds! Are you readyyyyy??")) { 
+      var timer = document.querySelector('.timer');
+
+      var spanTimer = document.createElement('span');
+
+      var timeLeft = 10;
+      spanTimer.innerText = timeLeft;
+
+      console.log(timeLeft);
+      var intervalId = setInterval(function() {
+        if (timeLeft) {
+          timeLeft--;
+          console.log(timeLeft)
+        } else {
+          clearInterval(intervalId);
+          location.href='https://media.giphy.com/media/Ix5Pk3cUofTLW/giphy.gif';
+        }
+        spanTimer.innerText = timeLeft;
+      }, 1000);
+
+      timer.appendChild(spanTimer);
+      }
+
+      var rightAnswer = document.querySelector('.right-answer');
+      rightAnswer.addEventListener('click', function(event) {
+        clearInterval(intervalId);
+        window.confirm('Hey, you\'re damn right!!');
+        location.href='https://media.giphy.com/media/3oFzmkkwfOGlzZ0gxi/giphy.gif';
+      });
+
+
+
 
   };
 

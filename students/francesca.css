@@ -289,6 +289,22 @@ section.experiments .is-expanded .collapse {
 
 /* posiciona bien y despues pon el div dentro del nav con icono lupa */
 
+/* timer */
+
+.timer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.timer span {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* sub-header */
 .sub-header {
     margin-top: 100px;
     padding: 20px;
@@ -341,3 +357,5 @@ section.experiments .is-expanded .collapse {
     background-color: #D4D5D4;
     color: #474646;
 }
+
+
