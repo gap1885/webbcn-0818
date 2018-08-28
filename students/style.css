@@ -1,7 +1,9 @@
 /*reset*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Satisfy');
+
 html {
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
 *, *:before, *after {
     box-sizing: inherit;
@@ -10,46 +12,34 @@ html {
     margin: 0;
     padding: 0;    
 }
+nav ul {
+	list-style:none;
+}
+ 
+/*Typo*/
+
+body{
+    font-family:'Open Sans Condensed', sans-serif;
+}
+/*Layout*/
+
+.container {
+    padding: 0 20px;  
+}
+
 @media (min-width: 768px) {
     .container {
       max-width: 728px;
       margin: 0 auto;
     }
 }
-
-/*Typo*/
-body { 
-        margin: 0; 
-        background-image: url("http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-045.jpg")   
-}
-
-.container {
-    padding: 1rem 1.5rem;
-    
-}
-
 /*Nav Bar*/
 header {
     width: 100%;
     overflow: hidden;
-    /* height: 70px; */
     position: relative;
-}
- 
-/* nav {
-        top:-30px;
-    position: absolute;
-    left:0;
-    right:0;
-	margin:20px 0;
-    width:100%;
-    opacity: 1;
-} */
- 
-nav ul {
-	list-style:none;
-}
- 
+} 
+
 nav > ul {
 	display:table;
 	width:100%;
@@ -96,15 +86,15 @@ nav li a .icon {
     display: block;
     line-height: 60px;
 }
- 
+
 nav > ul > li > a:hover > span {
 	top:0;
 }
  
 /*Colores*/
+
 nav ul li a .primero {
     background:orange;
-
 }
  
 nav ul li a .segundo {
@@ -130,24 +120,26 @@ nav ul li a .sexto {
 }
 
 /*Main*/
-main {
+body { 
+    margin: 0; 
+    background-image: url("http://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-045.jpg")   
+}
+div.main{
+    background-color:rgba(228, 190, 215, 0.274);
 }
 /*Banner*/
+
 section.banner div{
     background-image: url();
     margin: 0 auto;
-    color:wheat ;
+    color:darkslategray;
     text-align: center;
 }
 
 section.banner div h1{
     text-align: center;
-    text-transform: uppercase;
-    font-size: 40px;
-}
+    font-size: 60px;
 
-section.banner div h1 strong {
-    color: red;
 }
 
 /*Section ABOUT*/
@@ -156,20 +148,27 @@ main img.me{
     border-radius: 100%;
     display: block;
     margin: 0 auto; 
-    width: 100%;   
+    width: 50%;   
 }
 section.about{
-    background-color:rgba(228, 190, 215, 0.274);
     width: 80%;
     margin: 0 auto;
-    text-align: center;
-    
+    text-align: center;   
 }
 section.about p {
     padding: 20px; 
 }
 section.about h2 {
     padding: 15px;
+}
+
+div.interest .wrap.hide {
+    display: none;
+}
+/*section hobbies*/
+
+section.hobbies{
+    background-color: rgba
 }
 section.hobbies article.interests img {
     border-radius: 100px;
@@ -179,18 +178,53 @@ section.hobbies article.interests img {
 section.hobbies h3{
     padding: 10px;
 }
-
-section.hobbies .wrap{
-    padding: 10px 0;
-    
-}
 section.about ul li{
     list-style: none;
-
 }
-/*Wrap*/
-.box{ 
+
+/*box*/
+
+.box { 
     width: 60%;
     margin: 0 auto;
 }
+/*section experiments*/
 
+section.experiments {
+    background-color: rgba(12, 25, 38, 073);
+    border-radius: 5px;
+    color: wheat;
+    padding: 20px;
+    text-align: center;
+}
+section.experiments h2 { 
+    padding-bottom: 20px;
+}
+section.experiments h3 {
+    padding-bottom: 15px;
+}
+section.experiments p {
+    padding-bottom: 
+}
+
+/*Contact*/
+
+section.contact li {
+    list-style: none;
+}
+section.contact .list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;   
+}
+section.contact .list li {
+    padding: 5px;
+}
+section.contact li .icon{
+    font-size: 30px;   
+    color: navy;
+}
+section.contact li a{
+    text-decoration: none; 
+
+}
