@@ -171,10 +171,16 @@ input[type="text"] {
 
 .search-results ul {
   list-style-type: none;
-  padding-left: 10px;
-  padding-bottom: 20px;
+  padding: 0;
+}
+
+.search-results li {
+  padding: 20px;
   line-height: 150%;
-  margin: 20px 20px 0 20px;
+}
+
+.search-results li:hover {
+  background-color: #e54009;
 }
 
 .search-results a {
