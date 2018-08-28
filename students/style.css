@@ -74,45 +74,29 @@ html {
     padding-top: 20px;
   }
   
-  .container {
+container {
     margin: 20px;
   }
   
-  .section {
+section.interest {
     margin-bottom: 20px;
     padding-top: 20px;
   }
   
   @media (min-width: 768px) {
-    .container {
-      max-width: 728px;
-      margin: 0 auto;
+    max-width: 728px;
     }
   
-    .section {
-      margin-bottom: 30px;
-      padding-top: 30px;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    #site-main {
-      overflow:hidden
-    }
-  
-    .section {
+section.Experiments {
       width: 50%;
       float: left;
     }
-  }
-  
   /* ---- components ---- */
   
   
   /* ---- sections ---- */
 
   section.profile {
-    background-color: rgba(70, 72, 151, 0.548);
     padding: 20px;
     border-radius: 5px;
   }
@@ -121,8 +105,7 @@ html {
     padding: 20px;
     border-radius: 5px;
   }
-  section.h2 {
-     background-color: rgba(4, 5, 75, 0.836);
+  section.interests {
     padding: 20px;
     border-radius: 5px; 
   }
