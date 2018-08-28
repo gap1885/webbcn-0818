@@ -7,7 +7,8 @@ function main() {
     nodes[ix].addEventListener('click', function (event) {
       var description = event.currentTarget;
       var profile = description.parentNode;
-      profile.classList.toggle('hide');
+      p.querySelectorAll('p');
+      p.currentTarget.toggle('hide');
     });
   };
 }
