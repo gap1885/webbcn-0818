@@ -1,49 +1,138 @@
+/* ---- reset ---- */
+
 html {
-    box-sizing:  border-box;
-}
-
-*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
     box-sizing: inherit;
-}
-
-body {
+  }
+  
+  body {
     margin: 0;
-}
-
-/*typography*/
-
-body {
-    background: black;
-    color: white;
-}
-
-/*layout*/
-
-.container {
-    margin: 0 20px;
-}
-
-/*components*/
-
-header {
-    background: white;
-    color: blue;
-    overflow: hidden;
-    line-height: 40px; /*inheritance*/
-    padding: 10px;
-}
-
+    padding: 0;
+  }
+  
 h1{
     float: left;
     font-size: 34px;
     margin: 0;
 }
 
-nav {
-    float: right;
-}
+/*typography*/
 
+
+/*layout*/
+#site-main {
+    padding: 20px 0 0 0;
+}
 .experiments{
     background-color: white;
     color: black;
 }
+
+.container {
+    margin: 0 20px;
+}
+
+header {    
+    color: white;
+    background-color: rgb(217, 217, 217);
+    overflow: hidden;
+    line-height: 40px; /*inheritance*/
+}
+
+nav {
+    float: right;
+}
+
+.box{
+    background-color: 	rgb(192,192,192);
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 10px;
+}
+
+.title-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 40px 0 0 50px; */
+}
+
+.img-instagram {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-instagram img {
+    width: 20%;
+    border: 1 solid black;
+    border-radius: 50%;
+}
+
+.my-image {
+    width: 40%;
+}
+
+.title-area .description {
+    width: 50%;
+}
+
+
+.description {
+    width: 50%;
+    margin: -10px 0 0 15px;    
+}
+
+.subBox {
+    width: 85%;
+    margin: 20px 0 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.mainText {
+    font-size: 18px;
+    margin: 0 0 30px 0
+}
+
+#site-interests{
+    background-color: rgb(251, 173, 92);
+    margin: 0 0 50px 0;
+}
+
+
+/*components*/
+.area img{
+    border: 50 solid black;
+    width: 100%; 
+    height: auto;
+    margin: 0 0 20px 0;
+}
+
+
+.description h2 {
+    padding: 20px 0 0 0;
+    font-size: 28px;
+    margin: 0 0 -15px 0;
+}
+
+.profile .sub-title {
+    font-size: 13px;
+}
+
+.hide{
+    display: none;
+}
+
+.description .subBox{
+    display: none;
+}
+
+
+
+
+
+
+
+
