@@ -131,6 +131,10 @@ nav.hidden .nav-bar {
   display: none;
 }
 
+section.experiments.hidden .retracted {
+  display: none;
+}
+
 .button {
   display: block;
   background-color: #e54009;
