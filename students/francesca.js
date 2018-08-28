@@ -1,4 +1,4 @@
-'use stinct'
+'use strinct'
 
   var nodes = document.querySelectorAll('article h4');
 
@@ -7,12 +7,7 @@
       nodes[ix].addEventListener('click', function (event) {
         var h4 = event.currentTarget;
         var article = h4.parentNode;
-        var div = article.querySelector('div');
-        div.classList.toggle('expanded');
-        // var arrowDown = h4.firstElementChild;
-        // var arrowUP = h4.lastElementChild; //why not .children
-        // arrowUp.classList.toggle('expand');
-        // arrowDown.classList.toggle('hide');
+        article.classList.toggle('is-expanded')
       })
     }
   };

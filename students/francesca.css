@@ -256,12 +256,12 @@ section.experiments .content {
     display: none;
 }
 
-section.experiments .content.expanded {
+section.experiments .is-expanded .content {
     display: block;
 }
 
 .desplegable .expand img,
-.desplegable .hide img {
+.desplegable .collapse img {
     width: 12px;
 }
 
@@ -275,5 +275,12 @@ section.experiments .collapse {
     cursor: pointer;
 }
 
+section.experiments .is-expanded .expand {
+    display: none;
+}
+
+section.experiments .is-expanded .collapse {
+    display: inline;
+}
 
 /* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc */
