@@ -84,6 +84,42 @@ nav {
   color: #9EB4BD;
 }
 
+.search .search-bar {
+  position: relative;
+}
+
+.search  .search-results{
+  position: absolute;
+  top: 42px;
+  left: 0;
+  right: 0;
+  text-align: left;
+  background-color: #2E2E36;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.search .search-results ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search .search-results li {
+  margin-bottom: 2px;
+}
+
+.search .search-results a {
+  display: inline;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.search .search-results a:hover {
+  background-color: #9EB4BD;
+}
+
 /* profile */
 
 .profile {
