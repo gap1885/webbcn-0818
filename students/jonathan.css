@@ -39,6 +39,7 @@ h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: #e54009;
+  line-height: 150%;
 }
 
 h3 {
@@ -126,7 +127,7 @@ a:hover {
   text-align: center;
 }
 
-.hidden {
+nav.hidden .nav-bar {
   display: none;
 }
 
