@@ -32,13 +32,16 @@ h4{
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
 
 
 /* ---- typography ---- */
 
 body {
   color: #111;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 147%;
   font-family: 'Concert One';
@@ -117,7 +120,7 @@ h3 {
   padding: 5px;
   background-color:white;
   color:  #3f51b5;
-  border: 2px solid white;
+  border: 2px solid #3f51b5;
   border-radius: 5px;
 }
 
@@ -141,29 +144,66 @@ header .site-nav {
   justify-content: space-between;
 }
 
+.search {
+  text-align: center;
+}
+
+.input-student {
+  display: inline-block;
+  position: relative;
+}
+
+.input-student input:focus {
+  outline: none;
+}
+
+.input-student input {
+  font-family: 'Concert One';
+  text-align-last: left;
+  padding: 5px;
+  font-size: 14px;
+  color: grey;
+  -webkit-appearance: none;
+  border: 1px dotted #3f51b5;
+  border-radius: 5px;
+}
+
+.search-results {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background-color: gray;
+  border-radius: 5px;
+  text-align: center;
+} 
+
+.search-results a {
+  display: block;
+}
+
+.search-results li:hover {
+  background-color: #3f51b5;
+}
+
 main .general-information {
   background-color: #f0eceb;
   padding: 0;
   border-radius: 10px;
 }
 
-.general-information h2{
+.general-information h2 {
   margin: 0;
   font-size: 50px;
   padding-top: 30px;
   padding-bottom: 20px;
-}
-
-.general-information p.container{
-  text-align: center;
-  margin-top: 20px;
+  border: white;
 }
 
 .general-information img {
   width: 100%;
   margin: 0;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
 @media (min-width: 768px) {
@@ -173,7 +213,7 @@ main .general-information {
   }
 }
 
-h3.container{
+h3.container {
   padding-bottom: 10px;
 }
 
@@ -195,13 +235,13 @@ section.experiments .container {
   padding-bottom: 10px;
 }
 
-section .list-articles{
+section .list-articles {
   display: flex;
   align-content: space-between;
   flex-wrap: wrap;
 }
 
-.experiments article{
+.experiments article {
   border: 2px solid black;
   border-radius: 10px;
   width: 100%;
@@ -219,11 +259,11 @@ section.experiments p {
   padding-bottom: 10px;
 }
 
-.experiments p, h4{
+.experiments p, h4 {
   padding: 15px;
 }
 
-.experiments h4{
+.experiments h4 {
   cursor: pointer;
 }
 
@@ -231,7 +271,7 @@ section.experiments p {
   width: 15px;  
 }
 
-#site-footer img {
+footer img {
   padding: 0 5px;
   width: 40px;
 }
