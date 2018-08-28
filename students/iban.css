@@ -63,7 +63,7 @@ nav {
     margin: -10px 0 0 15px;    
 }
 
-.sub-box {
+.subBox {
     width: 85%;
     margin: 20px 0 20px 50px;
     display: flex;
@@ -114,7 +114,9 @@ nav {
     font-size: 13px;
 }
 
-
+/* .profile .description p{
+    display: none;
+} */
 
 
 
