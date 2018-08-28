@@ -185,7 +185,7 @@ section.experiments h3 {
 section.experiments .card {
     background-color: #FDFFFC;
     box-shadow: 6px 5px 26px #D4D5D4;
-    padding: 30px 20px;
+    padding: 30px 40px;
     margin-bottom: 30px;
 }
 
@@ -196,6 +196,7 @@ section.experiments h4 {
 section.experiments footer {
     font-size: 15px;
     padding-top: 20px;
+    text-align: right;
 }
 
 /* --- footer --- */
@@ -283,4 +284,4 @@ section.experiments .is-expanded .collapse {
     display: inline;
 }
 
-/* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc */
+/* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc nav shadow*/
