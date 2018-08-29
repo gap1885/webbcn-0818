@@ -11,7 +11,7 @@
       })
     }
 
-    // ------- quick jump
+// ------- quick jump
 
     var input = document.querySelector('.sub-header input');
     input.addEventListener('keyup', handleChange);
@@ -53,6 +53,7 @@
 
     function handleChange() {
       var searchTerms = input.value;
+      searchResults.innerHTML = '';
       var results = findStudents(searchTerms);
       
       displayResults(results)
@@ -66,8 +67,8 @@
       searchResults.innerHTML = '';
     });
 
-    document.body.addEventListener('keyup', function() {
-      if (e.which == 27) {
+    input.addEventListener('keyup', function(event) {
+      if (event.key === 'Escape') {
         searchResults.innerHTML = '';
       }
     });
@@ -78,32 +79,21 @@
 
     input.addEventListener('focus', handleChange);
 
+
+
+
+// ------- TIMER
     
+    if (window.confirm("Do you want to play? You have to guess what is my favorite interest in 10 seconds! Are you readyyyyy?? Attention: you have only one chance")) {
+      
+      // ---- margin for student quick jump
 
-    // ------- timer
+      var addMargin = document.querySelector('.sub-header');
+      addMargin.classList.add('add-margin');
+      
 
-    // var timer = document.querySelector('.timer');
+      // ---- timer starts
 
-    // var spanTimer = document.createElement('span');
-
-    // var timeLeft = 30;
-    // spanTimer.innerText = timeLeft;
-
-    // console.log(timeLeft);
-    // var intervalId = setInterval(function() {
-    //   if (timeLeft) {
-    //     timeLeft--;
-    //     console.log(timeLeft)
-    //   } else {
-    //     clearInterval(intervalId);
-    //   }
-    //   spanTimer.innerText = timeLeft;
-    // }, 1000);
-
-    // timer.appendChild(spanTimer);
-
-    
-    if (window.confirm("Do you want to play? You have to guess what is my favorite interest in 10 seconds! Are you readyyyyy??")) { 
       var timer = document.querySelector('.timer');
 
       var spanTimer = document.createElement('span');
@@ -118,7 +108,7 @@
           console.log(timeLeft)
         } else {
           clearInterval(intervalId);
-          location.href='https://media.giphy.com/media/Ix5Pk3cUofTLW/giphy.gif';
+          location.href='https://i.giphy.com/media/Ix5Pk3cUofTLW/giphy.webp';
         }
         spanTimer.innerText = timeLeft;
       }, 1000);
@@ -126,12 +116,24 @@
       timer.appendChild(spanTimer);
       }
 
+      // ---- game
+
+      var wrongAnswer = document.querySelectorAll('.wrong-answer');
+      for (var ix = 0; ix < wrongAnswer.length; ix++) {
+          wrongAnswer[ix].addEventListener('click', function(event) {
+          clearInterval(intervalId);
+          window.confirm('Nope, I\'m sorry');
+          location.href='https://i.giphy.com/media/Ix5Pk3cUofTLW/giphy.webp';
+        });
+      }
+
       var rightAnswer = document.querySelector('.right-answer');
       rightAnswer.addEventListener('click', function(event) {
         clearInterval(intervalId);
         window.confirm('Hey, you\'re damn right!!');
-        location.href='https://media.giphy.com/media/3oFzmkkwfOGlzZ0gxi/giphy.gif';
+        location.href='https://i.giphy.com/media/3oFzmkkwfOGlzZ0gxi/giphy.webp';
       });
+
 
 
 
