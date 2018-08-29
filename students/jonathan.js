@@ -12,13 +12,12 @@ function main() {
   });
 
 
-  var nodes = document.querySelectorAll('article.card');
+  var nodes = document.querySelectorAll('article.card h3');
   
   for (var ix = 0; ix < nodes.length; ix++) {
     nodes[ix].addEventListener('click', function (event) {
       var h3 = event.currentTarget;
       var article = h3.parentNode;
-      // var list = nav.querySelector('ul')
       article.classList.toggle('hidden');
     });
   };
@@ -56,7 +55,7 @@ function main() {
 
       var li = document.createElement('li');
       li.appendChild(link);
-      
+
       ul.appendChild(li);
     });   
     searchResults.appendChild(ul);
@@ -67,9 +66,78 @@ function main() {
     var results = findStudents(searchTerms);
     displayResults(results);
 
+    var searchResults = document.querySelector('.quick-nav .search-results');
+    document.body.addEventListener('click', function() {
+      searchResults.innerHTML = '';
+    })
+
+    document.addEventListener('keyup', function(e) {
+      if (e.keyCode == 27) { 
+        searchResults.innerHTML = '';
+      }
+    });
+
+    input.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+
+
+
+    input.addEventListener('focus', handleChange);
+
+
     console.log(results);
   }
+
+
+  // ----------------------------------------
+  // ----------- GAME COUNTDOWN -------------
+  // ----------------------------------------
+
+
+
+  // function countDown(i) {
+  //   var int = setInterval(function () {
+  //       console.log(i);
+  //       document.querySelector('.game .counter-box').innerHTML = i;
+  //       i-- || clearInterval(int);  //if i is 0, then stop the interval
+  //   }, 1000);
+  // }
+  // countDown(30);
+
+  var playButton = document.querySelector('.game .button');
+
+  playButton.addEventListener('click', function countDown(counter) {
+    
+    var description = document.querySelector('.game .description');
+    description.innerHTML = "find the easter egg on this page and click it!";
+
+    function easterEgg(){
+      var easterEgg = document.querySelector('section.overview img')
+      easterEgg.addEventListener('click', function() {
+        var displayCountdown = document.querySelector('.game .counter-box');
+        displayCountdown.innerHTML = '0';
+      });
+    }
+    
+    var counter = 30;
+    var timeoutId = window.setInterval(function(){
+      if (easterEgg()) {
+        var displayCountdown = document.querySelector('.game .counter-box');
+        displayCountdown.innerHTML = counter;
+        clearInterval(timeoutId);
+      } else if (counter >= 0) {
+        var displayCountdown = document.querySelector('.game .counter-box');
+        displayCountdown.innerHTML = counter;
+        counter--;
+        // console.log(counter);
+      } else {
+        clearInterval(timeoutId);
+      };
+    }, 1000);
+  });
 
 }
 
 window.addEventListener('load', main);
+

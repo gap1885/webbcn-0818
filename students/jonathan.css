@@ -48,6 +48,13 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+}
+
 p {
   margin: 0;
   text-align: center;
@@ -81,6 +88,17 @@ a:hover {
   padding: 0;
 }
 
+h3.counter-box {
+  display: inline-block;
+  font-size: 48px;
+  border: 2px solid #414141;
+  padding: 30px;
+}
+
+p.description {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
 
 
 /* ---- layout ---- */
@@ -130,6 +148,10 @@ a:hover {
   text-transform: uppercase;
 }
 
+.quick-nav label {
+  padding: 0 10px;
+}
+
 .quick-nav .search-bar {
   position: relative;
   display: inline-block;
@@ -142,11 +164,11 @@ input[type="text"] {
 
 .search-bar #quick-jump {
   padding: 5px 0;
-  margin: 10px 10px 2px 10px;
+  margin: 10px 2px;
   -webkit-appearance: none;
   border-style: hidden;
   border-bottom: 1px solid #bebebe;
-  width: 320px;
+  width: 260px;
   font-weight: 200;
 }
 
@@ -159,7 +181,6 @@ input[type="text"] {
   text-align: left;
   background-color: #e54009b0;
   left: 0; right: 0;
-  margin: 0 10px;
   z-index: 10;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -171,10 +192,19 @@ input[type="text"] {
 
 .search-results ul {
   list-style-type: none;
-  padding-left: 10px;
-  padding-bottom: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 20px;
   line-height: 150%;
-  margin: 20px 20px 0 20px;
+}
+
+.search-results li:hover {
+  background-color: #e54009;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .search-results a {
@@ -189,8 +219,16 @@ nav.hidden .nav-bar {
   display: none;
 }
 
-section.experiments.hidden .retracted {
+.game {
+  text-align: center;
+}
+
+article.card.hidden .retracted {
   display: none;
+}
+
+article.card {
+  cursor: pointer;
 }
 
 .button {
@@ -216,6 +254,10 @@ h3.menu-button {
   border-radius: 50%;
   color: #e54009;
   margin-bottom: 5px; 
+  cursor: pointer;
+}
+
+p.button {
   cursor: pointer;
 }
 
