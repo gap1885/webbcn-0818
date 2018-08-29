@@ -9,8 +9,8 @@ function main() {
     nodes[ix].addEventListener('click', function (event) {
       var h3 = event.currentTarget;
       var div = h3.parentNode;
-      var article = div.querySelector('article');
-      article.classList.toggle('hidden')
+      var technologies = div.querySelector('.articles');
+      technologies.classList.toggle('hidden')
     });
   }
   
@@ -53,6 +53,57 @@ function main() {
   
   input.addEventListener('keyup', handleChange);    
 
-}
+  var searchResults = document.querySelector('.quick-nav .results');
+
+  document.body.addEventListener('click',function() {
+    searchResults.innerHTML = '';
+  });
+  
+  document.body.addEventListener('keyup',function(e) {
+      if (e.Escape) {
+      searchResults.innerHTML = '';
+      }
+  });
+
+  input.addEventListener('click',function(event) {
+    event.stopPropagation();    
+  });
+  
+  input.addEventListener('focus', handleChange);
+  
+  //  ---- code counter ---//
+
+  var timeLeft = 30;
+  var timer = document.querySelector('.counter');
+  var countDown = document.createElement('span');
+  countDown.innerText = timeLeft;
+
+  console.log(timeLeft);
+
+  var counertId = setInterval(function() {
+    if (timeLeft) {
+      timeLeft--;
+      console.log(timeLeft)
+    } else {
+      clearInterval(counertId);
+    }
+    countDown.innerText = timeLeft;
+  }, 100);
+
+  timer.appendChild(countDown);
+
+
+
+
+
+
+  // var counertId = setTimeout(() {
+    
+  // }, 3000);
+
+  // clearTimeout(counertId);
+
+
+};
 
 window.addEventListener('load',main)

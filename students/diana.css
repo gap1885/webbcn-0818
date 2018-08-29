@@ -148,6 +148,11 @@ div.quick-nav .results a:hover{
   color: #C9D6D5;
 }
 
+/* ----- counter----- */
+
+div.col {
+  text-align: center;
+}
 
 
 /* ----components - profile----- */
@@ -208,12 +213,8 @@ section.experiments div article {
   margin-bottom: 10px;
 }
 
-section.experiments div article.hidden {
+section.experiments div .hidden {
   display: none;
-}
-
-section.experiments div article.expanded{
-  display: block; 
 }
 
 section.experiments div article.html {
