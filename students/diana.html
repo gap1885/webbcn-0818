@@ -26,14 +26,21 @@
     </div>
   </header> 
   <div class="container quick-nav">
-    <label for="name">Quick Search - Look for a Student: </label><br> 
+    <label for="name">Quick Search - Look for a Student: </label>
     <div class="searchbox ">
       <input type="Search" id="name" name="name" placeholder="Type Student Name">
       <div class="results">
       </div>
     </div>
   </div>
-
+  <div>
+    <div class="col">
+      <div class="counter">
+        <p class="count-text ">Auto destruct in</p>
+        <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+      </div>
+    </div>
+  </div>
   <main role="main" id="site-main">   
     <section class="profile container">
       <div class="profile-picture">
@@ -71,31 +78,33 @@
     <section class = "experiments container">
       <h2>Experiments</h2>
       <div>
-        <div class="prework">
-          <h3>Prework</h3>
-          <article role="article" class=" hidden">
+        <h3>Prework</h3>
+        <div class="articles hidden">
+          <article role="article">
               <h4>IronSkyDive</h4>
               <img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-logo.png" alt="Skydive Ironhack logo">
           </article>
         </div>
-    
-        <div class="classes">
-          <h3>Labs</h3>
-          <article role="article" class="html hidden">
+      </div>
+        
+      <div class="labs">
+        <h3>Labs</h3>
+        <div class="articles hidden">
+          <article role="article" class="html">
             <h4>HTML</h4>
           </article>
 
-          <article role="article" class="css hidden">
+          <article role="article" class="css">
             <h4>CSS</h4>
             <p>My first experiment with loops</p>
             <p><a href="https://github.com/Dbpautt/lab-javascript-basic-algorithms">View my JavaScript experiment on GitHub</a></p>
           </article>
 
-          <article role="article" class="javaScript hidden">
+          <article role="article" class="javaScript">
             <h4>JavaScript</h4>
           </article>
-        </div>     
-      </div>
+        </div>
+      </div>     
 
     </section>
   </main>

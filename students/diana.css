@@ -118,6 +118,7 @@ ul.site-nav {
 
 div.quick-nav {
   text-align: center;
+  text-justify: center;
 }
 
 
@@ -128,6 +129,7 @@ div.quick-nav .searchbox {
 
 div.quick-nav input{
   width: 200px;
+
 }
 
 div.quick-nav .results{
@@ -148,7 +150,16 @@ div.quick-nav .results a:hover{
   color: #C9D6D5;
 }
 
+/* ----- counter----- */
 
+div.col {
+  text-align: center;
+}
+
+div.counter {
+  border: 2px;
+  border-color: #696969;
+}
 
 /* ----components - profile----- */
 
@@ -208,12 +219,8 @@ section.experiments div article {
   margin-bottom: 10px;
 }
 
-section.experiments div article.hidden {
+section.experiments div .hidden {
   display: none;
-}
-
-section.experiments div article.expanded{
-  display: block; 
 }
 
 section.experiments div article.html {
