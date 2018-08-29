@@ -56,13 +56,14 @@ h3 {
 
 .img p {
     position: absolute;
-    top: 200px;
+    top: 400px;
     left: 200px;
+    z-index: 5;
 }
 
 .image img {
     position: relative;
-
+    z-index: 1;
 }
 
 /* components */
@@ -118,4 +119,74 @@ section p {
 .experiments.expanded .card {
     display: block;
 }
+
+.quick-nav .search {
+    position: relative;
+    display: inline-block;
+}
+
+/* 50px from where the first parent was anchored, once an element has been anchored  */
+/* The left and right 0 is so that the pull down has the same size as the input field above */
+.quick-nav .search-results {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    background-color: #AC3B61;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 10;
+}
+
+.quick-nav .search-results ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.quick-nav .search-results li {
+    margin-bottom: 2px;
+}
+
+.quick-nav .search-results a {
+    display: block;
+    color:black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.quick-nav .search-results a:hover {
+    background-color: beige;
+}
+
+#clockdiv {
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: right;
+	font-size: 30px;
+}
+
+#clockdiv > div {
+	padding: 10px;
+	border-radius: 3px;
+	background: black;
+	display: inline-block;
+}
+
+#clockdiv div > span {
+	padding: 15px;
+	border-radius: 3px;
+	background: black;
+	display: inline-block;
+}
+
+.smalltext {
+	padding-top: 5px;
+	font-size: 16px;
+}
+ /* .search-bar { 
+    transform: rotate
+ } */
 
