@@ -136,6 +136,12 @@ h3 {
   display: none;
 }
 
+.timer {
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+}
+
 
 /* Sections */
 
@@ -153,9 +159,9 @@ header .site-nav {
   position: relative;
 }
 
-.input-student input:focus {
-  outline: none;
-}
+/* .input-student input:focus {
+  outline:;
+} */
 
 .input-student input {
   font-family: 'Concert One';
@@ -186,12 +192,16 @@ header .site-nav {
   background-color: #3f51b5;
 }
 
-main .general-information {
+.general-information {
   background-color: #f0eceb;
   padding: 0;
   border-radius: 10px;
+  text-align: center;
 }
 
+.general-information h3{
+  text-align: left;
+}
 .general-information h2 {
   margin: 0;
   font-size: 50px;
@@ -275,3 +285,4 @@ footer img {
   padding: 0 5px;
   width: 40px;
 }
+
