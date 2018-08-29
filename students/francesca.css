@@ -68,6 +68,7 @@ p {
     top: 0;
     width: 100%;
     z-index: 3;
+    box-shadow:  0 -3px 11px #D4D5D4;
 }
 
 #site-main {
@@ -284,7 +285,7 @@ section.experiments .is-expanded .collapse {
     display: inline;
 }
 
-/* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc nav shadow input:focusssss*/
+/* todo position title, p to write, p to modified, images, image max-width articles max-width + flexbox etc etc etc input:focusssss*/
 
 
 /* posiciona bien y despues pon el div dentro del nav con icono lupa */
@@ -302,13 +303,13 @@ section.experiments .is-expanded .collapse {
 }
 
 .sub-header.add-margin {
-    margin-top: 140px;
+    margin-top: 170px;
 }
 
 
 /* sub-header */
 .sub-header {
-    margin-top: 100px;
+    margin-top: 130px;
     padding: 20px;
     text-align: center;
 }

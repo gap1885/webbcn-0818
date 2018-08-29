@@ -84,7 +84,7 @@
 
 // ------- TIMER
     
-    if (window.confirm("Do you want to play? You have to guess what is my favorite interest in 10 seconds! Are you readyyyyy?? Attention: you have only one chance")) {
+    if (window.confirm("Do you want to play? You have to guess what is my favorite interest in 10 seconds and you have only one chance! Are you readyyyyy??")) {
       
       // ---- margin for student quick jump
 
@@ -116,7 +116,7 @@
       timer.appendChild(spanTimer);
       }
 
-      // ---- game
+      // ---- game answers
 
       var wrongAnswer = document.querySelectorAll('.wrong-answer');
       for (var ix = 0; ix < wrongAnswer.length; ix++) {
@@ -130,7 +130,7 @@
       var rightAnswer = document.querySelector('.right-answer');
       rightAnswer.addEventListener('click', function(event) {
         clearInterval(intervalId);
-        window.confirm('Hey, you\'re damn right!!');
+        window.confirm('Hey, you\'re goddamn right!!');
         location.href='https://i.giphy.com/media/3oFzmkkwfOGlzZ0gxi/giphy.webp';
       });
 
