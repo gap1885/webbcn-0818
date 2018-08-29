@@ -88,7 +88,7 @@ function main() {
       clearInterval(counertId);
     }
     countDown.innerText = timeLeft;
-  }, 100);
+  }, 3000);
 
   timer.appendChild(countDown);
 

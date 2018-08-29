@@ -118,6 +118,7 @@ ul.site-nav {
 
 div.quick-nav {
   text-align: center;
+  text-justify: center;
 }
 
 
@@ -128,6 +129,7 @@ div.quick-nav .searchbox {
 
 div.quick-nav input{
   width: 200px;
+
 }
 
 div.quick-nav .results{
@@ -154,6 +156,10 @@ div.col {
   text-align: center;
 }
 
+div.counter {
+  border: 2px;
+  border-color: #696969;
+}
 
 /* ----components - profile----- */
 
