@@ -1,6 +1,9 @@
 'use strict'
 
 function main () {
+
+  // -------- toggle experiments --------
+
   var node = document.querySelector('section.experiments h2');
   
   node.addEventListener('click', function(event){
@@ -12,6 +15,8 @@ function main () {
     expand.classList.toggle('hidden');
     collapse.classList.toggle('hidden');
   });
+
+  // -------- search bar --------
   
   function findStudents(terms) {
     var results = [];
@@ -25,9 +30,6 @@ function main () {
   }
 
   function displayResults(results) {
-    var searchResults = document.querySelector('.search .search-results');
-    searchResults.innerHTML = '';
-
     var ul = document.createElement('ul');
     results.forEach(function(student) {
       var link= document.createElement('a');
@@ -50,6 +52,37 @@ function main () {
 
   var input = document.querySelector('.search input');
   input.addEventListener('keyup', handleChange);
+
+  var searchResults = document.querySelector('.search .search-results');
+  document.body.addEventListener('click', function() {
+    searchResults.innerHTML = '';
+  });
+
+  input.addEventListener('click', function() {
+    event.stopPropagation();
+  });
+
+  input.addEventListener('focus', handleChange);
+
+
+  // -------- timer --------
+
+  var timeLeft = 30;
+  var p = document.createElement('p');
+  
+  console.log(timeLeft);
+  var intervalId = setInterval(function() {
+    p.innerText= timeLeft;
+    if (timeLeft) {
+      timeLeft--;
+      console.log(timeLeft)
+    } else {
+      clearInterval(intervalId);
+    }
+    var timer = document.querySelector('.displayTimer');
+    timer.appendChild(p);
+  }, 1000);
+
 
 }
 

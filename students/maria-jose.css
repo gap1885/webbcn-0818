@@ -86,6 +86,7 @@ nav {
 
 .search .search-bar {
   position: relative;
+  display: inline-block;
 }
 
 .search  .search-results{
@@ -110,14 +111,23 @@ nav {
 }
 
 .search .search-results a {
-  display: inline;
   padding: 5px;
   text-decoration: none;
   color: white;
 }
 
-.search .search-results a:hover {
+.search .search-results li:hover {
   background-color: #9EB4BD;
+}
+
+.displayTimer {
+  width: 100%;
+  color: #CEA097;
+  border: 1px solid #ebebeb;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 /* profile */
