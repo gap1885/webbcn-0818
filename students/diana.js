@@ -1,6 +1,5 @@
 'use strict';
 
-console.log("Hello");
 function main() {
 
   var nodes = document.querySelectorAll('section.experiments h3');
@@ -24,8 +23,9 @@ function main() {
     return results;
   }
 
+  var searchResults = document.querySelector('.quick-nav .results');
+
   function displayResults(results) {
-    var searchResults = document.querySelector('.quick-nav .results');
     searchResults.innerHTML = '';
 
     var ul = document.createElement('ul');
@@ -53,16 +53,16 @@ function main() {
   
   input.addEventListener('keyup', handleChange);    
 
-  var searchResults = document.querySelector('.quick-nav .results');
-
   document.body.addEventListener('click',function() {
     searchResults.innerHTML = '';
   });
   
-  document.body.addEventListener('keyup',function(e) {
-      if (e.Escape) {
+  document.body.addEventListener('keyup',function(event) {
+    event.preventDefault;
+    if (event.key === 'Escape') {
       searchResults.innerHTML = '';
-      }
+    }
+
   });
 
   input.addEventListener('click',function(event) {
@@ -78,12 +78,10 @@ function main() {
   var countDown = document.createElement('span');
   countDown.innerText = timeLeft;
 
-  console.log(timeLeft);
 
   var counertId = setInterval(function() {
     if (timeLeft) {
       timeLeft--;
-      console.log(timeLeft)
     } else {
       clearInterval(counertId);
     }
@@ -93,17 +91,22 @@ function main() {
   timer.appendChild(countDown);
 
 
-
-
-
-
-  // var counertId = setTimeout(() {
-    
-  // }, 3000);
-
-  // clearTimeout(counertId);
-
-
+  
 };
+
+var lost = document.createElement('div');
+div.innerHTML = `
+  <main>
+    <div class = "lost">
+      <h2>You've lost!</h3>
+      <img src="https://i.pinimg.com/originals/08/68/ab/0868ab440ea76d859e625d117fd821a0.gif" alt="" width="50%" >
+    <div>
+  </main>
+`;
+
+document.body.appendChild(div);
+
+
+
 
 window.addEventListener('load',main)
