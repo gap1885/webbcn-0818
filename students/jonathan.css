@@ -320,6 +320,7 @@ p.button {
   section .experiments {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .card {
