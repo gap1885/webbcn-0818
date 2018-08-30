@@ -1,6 +1,9 @@
 'use strict'
 
 function main() {
+
+  // - show hide experiments
+
   var nodes = document.querySelectorAll('section h2');
   
   for (var ix = 0; ix < nodes.length; ix++) {
@@ -10,6 +13,8 @@ function main() {
       section.classList.toggle('expanded');
     });
   };
+
+  // - student search
 
   function findStudents(terms) {
     var results = [];
@@ -63,39 +68,48 @@ function main() {
   document.addEventListener('keyup', function(e) {
     if (e.keyCode == 27) { 
       searchResults.innerHTML = '';
-   } 
-});
-};
+    } 
+  });
+
+  // - play
+
+  // var playButton = document.querySelector('.game .button');
+  
+  // playButton.addEventListener('click', countDown);
+
+  // function countDown(counter) {
+  //   playButton.removeEventListener('click', countDown);
+
+  //   var description = document.querySelector('.game .description');
+  //   description.innerHTML = "find the easter egg on this page and click it!";
+    
+  //   var easterEgg = document.querySelector('section.overview img')
+  //   easterEgg.addEventListener('click', function() {
+  //     // var displayCountdown = document.querySelector('.game .counter-box');
+  //     clickedImage = true;
+  //     // displayCountdown.innerHTML = '0';
+  //   });
+
+  //   var clickedImage = false;
+
+  //   var counter = 30;
+  //   var timeoutId = window.setInterval(timerFunction, 100);
+
+  //   function timerFunction () {
+  //     if (clickedImage) {
+  //       clearInterval(timeoutId);
+  //     } else if (counter >= 0) {
+  //       var displayCountdown = document.querySelector('.game .counter-box');
+  //       displayCountdown.innerHTML = counter;
+  //       counter--;
+  //       // console.log(counter);
+  //     } else {
+  //       clearInterval(timeoutId);
+  //     }
+  //   }
+  // };
+
+}
 
 window.addEventListener('load', main);
-
-
-// Async challenge
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  
-  return {
-    'seconds': seconds
-  };
-}
-
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
-
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
 
