@@ -23,15 +23,15 @@ body {
   line-height: 147%;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 }
 
 h1 {
   font-size: 24px;
   line-height: 150%;
-  margin: 0;
   color: grey;
 }
 
@@ -44,14 +44,11 @@ h2 {
 
 h3 {
   font-size: 20px;
-  text-align: center;
-  margin: 0;
+  padding-bottom: 15px;
 }
 
 h4 {
   font-size: 16px;
-  text-align: center;
-  margin: 0;
   padding-top: 20px;
 }
 
@@ -100,6 +97,12 @@ p.description {
   padding-bottom: 10px;
 }
 
+#site-footer p {
+  text-align: left;
+  font-size: 12px;
+  color: white;
+}
+
 
 /* ---- layout ---- */
 
@@ -111,9 +114,8 @@ p.description {
 }
 
 #site-footer {
-  color: white;
-  padding: 60px 0;
-  background: #111;
+  background-color: #e54009;
+  padding: 20px 0;
 }
 
 #site-main {
@@ -275,19 +277,54 @@ p.button {
   z-index: 5;
 }
 
+
 .card {
+  flex: 1;
   display: block;
-  background-color: #273c58;
-  box-shadow: 12px 12px 40px 2px #888888;
-  border-radius: 30px;
-  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 3px 2px #4e4e4e5b;
+  padding: 30px;
   margin: 20px auto;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: rgb(56, 56, 56);
 }
 
 .card a {
   text-decoration: none;
   color: white;
+}
+
+.card .button {
+  border-radius: 0;
+  border: 2px solid #e54009;
+  background-color: white;
+  color: #e54009;
+}
+
+.card .button:hover {
+  background-color: #e54009;
+  color: white;
+}
+
+.card .button:active {
+  background-color: #9c3917;
+  border: 2px solid #9c3917
+}
+
+.card .bubtton:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  section .experiments {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1;
+    margin: 10px;
+  }
+
 }
