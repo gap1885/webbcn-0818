@@ -106,25 +106,27 @@ function main() {
   // countDown(30);
 
   var playButton = document.querySelector('.game .button');
+  
+  playButton.addEventListener('click', countDown);
 
-  playButton.addEventListener('click', function countDown(counter) {
-    
+  function countDown(counter) {
+    playButton.removeEventListener('click', countDown);
+
     var description = document.querySelector('.game .description');
     description.innerHTML = "find the easter egg on this page and click it!";
-
-    function easterEgg(){
-      var easterEgg = document.querySelector('section.overview img')
-      easterEgg.addEventListener('click', function() {
-        var displayCountdown = document.querySelector('.game .counter-box');
-        displayCountdown.innerHTML = '0';
-      });
-    }
     
+    var easterEgg = document.querySelector('section.overview img')
+    easterEgg.addEventListener('click', function() {
+      // var displayCountdown = document.querySelector('.game .counter-box');
+      clickedImage = true;
+      // displayCountdown.innerHTML = '0';
+    });
+
+    var clickedImage = false;
+
     var counter = 30;
     var timeoutId = window.setInterval(function(){
-      if (easterEgg()) {
-        var displayCountdown = document.querySelector('.game .counter-box');
-        displayCountdown.innerHTML = counter;
+      if (clickedImage) {
         clearInterval(timeoutId);
       } else if (counter >= 0) {
         var displayCountdown = document.querySelector('.game .counter-box');
@@ -134,8 +136,8 @@ function main() {
       } else {
         clearInterval(timeoutId);
       };
-    }, 1000);
-  });
+    }, 100);
+  };
 
 }
 
