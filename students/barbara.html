@@ -10,56 +10,62 @@
 </head>
 
 <body>
-<div class="block-color">
-    <div id="clockdiv">
-        <span class="seconds"></span>
-        <div class="smalltext">Seconds</div>
-    </div>
-    <header role="banner"> 
+
+<header id="site-header" role="banner"> 
+    <!-- <div class="game">
+        <input type="button" name="clickMe" id="alertTimerButton" value="Click me and wait!" onclick="alertTimerClickHandler()"/>
+        <div class="clock"></div>
+    </div> -->
+
+    <div class="container">
+
         <h3>Cohort 08 2018</h3>    
+
         <nav>
-        <a class = "heart" href="#">♥︎</a>
-        <a href="../index.html" class="homepage btn-navigation">Homepage</a>   
-        
-    <ul class="top-links">
-        <li><a class= "btn btn-navigation" href="#">comics</a></li>
-        <li><a class= "btn btn-navigation" href="#">anime</a></li>
-        <li><a class= "btn btn-navigation" href="#">gin clubs</a></li>
-    </ul>                    
+            <a href="../index.html" class="homepage btn-navigation">♥ Homepage</a>                         
         </nav>
-    </header>
-    <div class="quick-nav">
-        <label for ="">Quick Jump</label>
-        <div class="search">
-            <input type="text" placeholder="Students">
-            <div class="search-results"></div>
+
+        <div class="quick-nav">
+            <label for ="">Quick Jump</label>
+            <div class="search">
+                <input type="text" placeholder="Students">
+                <div class="search-results"></div>
+            </div>
         </div>
     </div>
-</div>
-<main>
-<section class="profile">  
-<div class="img">
-<img class="background" src="https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-1-1024x683.jpg" alt="beach">
-    <p>Barbara<br>Web Developer from <em>Germany</em></p>
-     
-</div>
-</section>
+</header>
 
-<section class="experiments">
-    <h2 class="container">Experiments</h2>
-    <article class="card container">
-        <h3>JS Algorithms</h3>
-        <p>My first experiments with variables, conditionals and loops</p>
-        <a class="github-link btn-navigation" href="#">View on Github</a>
-    </article>
-</section>
+<main id="site-main">
+    <section class="profile">  
+        <div>     
+            <p>Barbara<br>Web Developer from <em>Germany</em></p>
+        </div>
+        <ul class="interests">
+            <li>comics</li>
+            <li>anime</li>
+            <li>gin clubs</li>
+        </ul>  
+    </section>
+
+    <section class="experiments container">
+        <h2>Experiments</h2>
+        <article class="card">
+            <h3>JS Algorithms</h3>
+            <p>My first experiments with variables, conditionals and loops</p>
+            <a class="github-link btn-navigation" href="#">View on Github</a>
+            <p>Created on: 08/20/2018</p>
+        </article>
+    </section>
 </main>
 
-<footer class="footer-section" role="contentinfo">
-<div class="footer">
-    <p>Created on: 08/20/2018</p>
-</div>
-</footer> 
+<footer id="site-footer" role="contentinfo">
+    <div class="social-media">
+        <a class="social-linkedin" href="http://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a class="social-instagram" href="http://www.instagram.com" target="_blank">Instagram</a>
+        <a class="social-github" href="http://www.github.com" target="_blank">Github</a>
+    </div>
+</footer>
+
 <script src="../students.js"></script>
 <script src="barbara.js"></script>
 </body>
