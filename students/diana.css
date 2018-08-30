@@ -37,7 +37,6 @@ h1 {
 h2 {
   font-size: 22px;
   text-align: center;
-
 }
 
 h3 {
@@ -118,9 +117,9 @@ ul.site-nav {
 
 div.quick-nav {
   text-align: center;
-  text-justify: center;
+  display: flex;
+  flex-direction: column;
 }
-
 
 div.quick-nav .searchbox {
   position: relative;
@@ -143,7 +142,7 @@ div.quick-nav .results{
 
 div.quick-nav .results a{
   color: white;
-  display: block;
+  display: inline-block;
 }
 
 div.quick-nav .results a:hover{
@@ -153,13 +152,22 @@ div.quick-nav .results a:hover{
 /* ----- counter----- */
 
 div.col {
+  padding-top: 10px;
   text-align: center;
 }
 
 div.counter {
-  border: 2px;
+  border-width: 2px;
   border-color: #696969;
 }
+
+.lost {
+  display:flex;
+  align-items:center;
+  padding-top:50px;
+  flex-direction:column;
+}
+
 
 /* ----components - profile----- */
 
@@ -171,7 +179,7 @@ section.profile{
 
 section.profile .profile-picture {
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  animation: 4s poly infinite alternate ease-in-out;
+  animation: 1s poly infinite alternate ease-in-out;
   width: 50%;
 }
 @keyframes poly {
@@ -199,7 +207,6 @@ section.interests div {
 
 section.interests article{
   width: 25%;
-
 }
 
 
