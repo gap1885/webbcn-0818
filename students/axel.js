@@ -1,7 +1,15 @@
 'use strict';
 
-function main() {
 
+
+function buildDom(html) {
+  var div = document.createElement('div');
+  div.innerHTML = html;
+  return div.children[0];
+}
+
+
+function main() {
 
 //-----EXPERIMENTS----//
 
@@ -14,7 +22,6 @@ function main() {
       content.classList.toggle('hide');
     });
   };
-
 
 //-----BUTTON-----//
 
@@ -35,7 +42,6 @@ function main() {
       event.target.classList.toggle('button-inverted');
     });
   };
-
 
 //----DROP DOWN MENU----//
 
@@ -93,8 +99,6 @@ function main() {
   document.querySelector('.input-student input').addEventListener('focus', handleChange);
 
 
-
-
 //-----TIMER-----//
 
   var time = 30;
@@ -104,18 +108,27 @@ function main() {
   p.innerText = time;
   document.querySelector('.main-image').appendChild(p);
   var timerId = setInterval(function () {
-      time -- ;
-      if (time === 0){
-        clearInterval(timerId);
-      };
-      p.innerText = time;
-      document.querySelector('.timer').addEventListener('click', function (){
-        clearInterval(timerId); 
-    });
+    time -- ;
+    if (time === 0){
+      clearInterval(timerId);
+    };
+    p.innerText = time;
   }, 1000);
+  
+  p.addEventListener('click', function (){
+    clearInterval(timerId); 
+  });
 };
 
 
-
-
 window.addEventListener('load', main);
+
+
+//------ACTIVATE GAMES-----//
+var playButton = document.querySelector('play')
+
+var play = document.addEventListener('click', function (event){
+  var frame = buildDom(`
+
+  `)
+});
