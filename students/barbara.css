@@ -33,9 +33,11 @@ html {
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 600;
+    margin: 0;
   }
   
   h3 {
+    margin: 0;
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 400;
@@ -45,20 +47,47 @@ html {
     margin: 0;
   }
   
-  
+  .interest>h3 {
+      color: #f5f5f5;
+      text-shadow: 0px 1px 0px black;
+  }
   
   /* ---- layout ---- */
+
+  section {
+      padding-top: 20px;
+  }
   
 #site-header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 3;
     box-shadow:  0 -3px 11px #D4D5D4;
+    height: 170px;
+}
+
+#site-header .nav-bar {
+    display: flex;
+}
+
+#site-header .nav-bar h3 {
+    flex: 1 0 33%;
+}
+
+#site-header .nav-bar nav {
+    flex: 1 0 33%;
+    text-align: center;
+}
+
+#site-header .nav-bar .game {
+    flex: 1 0 33%;
+    text-align: right;
 }
 
 #site-main {
-    margin-top: 210px;
+    margin-top: 170px;
     margin-bottom: 60px;
 }
 
@@ -110,15 +139,7 @@ header {
     text-decoration: none;
 }
 
-#site-main.interests ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-ul.interests {
-    list-style: none;
-}
 
 @media (min-width: 700px) {
 #interests ul {
@@ -143,7 +164,7 @@ section.experiments h2 {
 section.experiments .card {
     background-color: #FDFFFC;
     box-shadow: 6px 5px 26px #D4D5D4;
-    padding: 30px 40px;
+    
     margin-bottom: 30px;
 }
   
@@ -154,15 +175,56 @@ section.experiments .card {
     text-decoration: none;
   }
   
- /* ---- main ---- */  
+ /* ---- jumbotron ---- */  
 
-.profile {
-    background: url("https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-1-1024x683.jpg") no-repeat 0 0;
-    background-size: 100%;
+.jumbotron {
+    background: url("https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-1-1024x683.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-position: 0 -80px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron h3{
+    padding-top: 20px;
+    text-shadow: 1px 1px 0px white;
+}
+
+  /* ---- interests ---- */
+
+.interests {
+    display: flex;
+    flex-direction: column;
+}
+
+.interests>h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.interests>.wrapper {
+    display: flex;
+    
+}
+.interest {
+    position: relative;
+    flex: 1 0 33%;
+}
+
+.interest>img {
     width: 100%;
-    /* padding: 105px 20px; */
-    height: 280px;
-    padding: 30px;
+}
+
+.interest>h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
 }
 
   /* ---- footer ---- */
@@ -222,25 +284,33 @@ section.experiments .card {
   
   /* ---- section ---- */
   
-section.experiments .container {
+section.experiments {
     background-color: #f5f5f5;
-    padding: 30px 0;
 }
 
-section.experiments h2 {
-    margin-bottom: 20px;
+section.experiments>h3 {
+    text-align: center;
+    padding: 10px;
 }
+
+section.experiments>.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 
 section.experiments .card {
     background-color: #FDFFFC;
     box-shadow: 6px 5px 26px #D4D5D4;
     padding: 30px 40px;
     margin-bottom: 30px;
+    width: 450px;
 }
   
 /* quick-nav */
 .quick-nav {
-    margin-top: 50px;
+    
     padding: 20px;
     text-align: center;
 }
@@ -290,4 +360,10 @@ section.experiments .card {
 .quick-nav .search-results a:hover{
     background-color: #D4D5D4;
     color: #474646;
+}
+
+/* components */
+
+.hide {
+    display: none;
 }
