@@ -4,13 +4,18 @@ function main() {
 
   // - show hide experiments
 
-  var nodes = document.querySelectorAll('section h2');
-  
+  var nodes = document.querySelectorAll('article.card h4');
+
   for (var ix = 0; ix < nodes.length; ix++) {
     nodes[ix].addEventListener('click', function (event) {
-      var h2 = event.currentTarget;
-      var section = h2.parentNode;
-      section.classList.toggle('expanded');
+      var h4 = event.currentTarget;
+      var article = h4.parentNode;
+      var content = article.querySelector('.content');
+      var expandArrow = article.querySelector('.expand');
+      var collapseArrow = article.querySelector('.collapse')
+      content.classList.toggle('hide');
+      expandArrow.classList.toggle('hide');
+      collapseArrow.classList.toggle('hide');
     });
   };
 
