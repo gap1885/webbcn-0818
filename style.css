@@ -49,6 +49,7 @@ body.site #site-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 
 body.site #site-footer {
@@ -92,6 +93,7 @@ body.site .section {
     width: 50%;
     float: left;
   }
+
 }
 
 /* ---- components navbar ---- */
