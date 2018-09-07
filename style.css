@@ -154,3 +154,35 @@ body.site section.links {
   padding: 20px;
   border-radius: 5px;
 }
+
+/* ---- sections projects ---- */
+
+body.site section.projects .photo {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+
+body.site section.projects img {
+  width: auto;
+  height: 100%;
+}
+
+body.site section.projects .label {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  background: black;
+}
+
+body.site section.projects .label a {
+  color: white; 
+}
+
+body.site section.projects .next {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
