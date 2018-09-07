@@ -15,22 +15,22 @@ body {
 
 /* ---- typography ---- */
 
-body {
+body.site {
   color: #111;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 147%;
 }
 
-h1 {}
+body.site h1 {}
 
-h2 {
+body.site h2 {
   margin-top: 0;
 }
 
-h3 {}
+body.site h3 {}
 
-p {
+body.site p {
   margin: 0;
 }
 
@@ -38,94 +38,118 @@ p {
 
 /* ---- layout ---- */
 
-#site-header {
+body.site #site-header {
   padding: 30px 0;
   color: white;
   background: #111;
 }
 
-#site-footer {
+body.site #site-footer {
   color: white;
   padding: 60px 0;
   background: #111;
 }
 
-#site-main {
+body.site #site-main {
   margin-bottom: 60px;
   padding-top: 20px;
 }
 
-.container {
+body.site .container {
   margin: 0 20px;
 }
 
-.section {
+body.site .section {
   margin-bottom: 20px;
   padding-top: 20px;
 }
 
 @media (min-width: 768px) {
-  .container {
+  body.site .container {
     max-width: 728px;
     margin: 0 auto;
   }
 
-  .section {
+  body.site .section {
     margin-bottom: 30px;
     padding-top: 30px;
   }
 }
 
 @media (min-width: 1024px) {
-  #site-main {
+  body.site .row {
     overflow:hidden
   }
 
-  .section {
+  body.site .cols-2 {
     width: 50%;
     float: left;
   }
 }
 
-/* ---- components ---- */
+/* ---- components expandable ---- */
 
 
-.expandable .handler {
+body.site .expandable .handler {
   cursor: pointer;
 }
 
-.expandable .expand {
+body.site .expandable .expand {
   display: inline;
 }
 
-.expandable .collapse {
+body.site .expandable .collapse {
   display: none;
 }
 
-.expandable .handler:hover {
+body.site .expandable .handler:hover {
   background-color: #ccc;
 }
 
-.expandable .content {
+body.site .expandable .content {
   display: none;
 }
 
-.expandable.expanded .content {
+body.site .expandable.expanded .content {
   display: block;
 }
 
 
-.expandable.expanded .expand {
+body.site .expandable.expanded .expand {
   display: none;
 }
 
-.expandable.expanded .collapse {
+body.site .expandable.expanded .collapse {
   display: inline;
 }
 
-/* ---- sections ---- */
+/* ---- components gallery ---- */
 
-section.links {
+body.site .gallery {
+  list-style: none;
+  padding: 0;
+}
+
+body.site .gallery .photo {
+  margin-bottom: 30px;
+}
+
+body.site .gallery img {
+  width: 100%;
+  min-height: 200px;
+  background-color: #ccc;
+}
+
+body.site .gallery .label {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+
+
+/* ---- sections links ---- */
+
+body.site section.links {
   background-color: lightgray;
   padding: 20px;
   border-radius: 5px;
