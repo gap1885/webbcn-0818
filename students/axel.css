@@ -281,6 +281,18 @@ section.experiments p {
   width: 15px;  
 }
 
+.close-icon {
+  position: absolute;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.canvas-game {
+  text-align: center;
+}
+
 footer img {
   padding: 0 5px;
   width: 40px;
