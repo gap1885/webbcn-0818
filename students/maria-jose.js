@@ -1,42 +1,38 @@
 'use strict'
-
-function main () {
-
-  // -------- toggle experiments --------
-
-  var node = document.querySelector('section.experiments h2');
-  
-  node.addEventListener('click', function(event){
-    var parent = event.currentTarget.parentNode;
-    var div = parent.querySelector('div');
+// -------- toggle experiments --------
+const main = () => {
+  const node = document.querySelector('section.experiments h2');
+  node.addEventListener('click', (event) => {
+    const parent = event.currentTarget.parentNode;
+    const div = parent.querySelector('div');
     div.classList.toggle('hidden');
-    var expand = parent.querySelector('.expand');
-    var collapse = parent.querySelector('.collapse');
+    const expand = parent.querySelector('.expand');
+    const collapse = parent.querySelector('.collapse');
     expand.classList.toggle('hidden');
     collapse.classList.toggle('hidden');
-  });
+  })
+
 
   // -------- search bar --------
   
-  function findStudents(terms) {
-    var results = [];
-
+  const findStudents = (terms) => {
+    let results = [];
     if(terms) {
-      results = students.filter(function(student) {
+      results = students.filter(student => {
         return student.name.toLowerCase().indexOf(terms) >= 0; 
       });
     };
     return results;  
   }
 
-  function displayResults(results) {
-    var ul = document.createElement('ul');
-    results.forEach(function(student) {
-      var link= document.createElement('a');
+  const displayResults = (results) => {
+    const ul = document.createElement('ul');
+    results.forEach(student => {
+      const link= document.createElement('a');
       link.innerText= student.name;
       link.setAttribute('href', '../' + student.url);
 
-      var li = document.createElement('li');
+      const li = document.createElement('li');
       li.appendChild(link);
       ul.appendChild(li);
     });
@@ -44,21 +40,21 @@ function main () {
     searchResults.appendChild(ul);
   }
 
-  function handleChange() {
-    var searchTerms = input.value.toLowerCase();
-    var results = findStudents(searchTerms);
+  const handleChange = () => {
+    const searchTerms = input.value.toLowerCase();
+    const results = findStudents(searchTerms);
     displayResults(results);
   }
 
-  var input = document.querySelector('.search input');
+  const input = document.querySelector('.search input');
   input.addEventListener('keyup', handleChange);
 
-  var searchResults = document.querySelector('.search .search-results');
-  document.body.addEventListener('click', function() {
+  const searchResults = document.querySelector('.search .search-results');
+  document.body.addEventListener('click', () => {
     searchResults.innerHTML = '';
   });
 
-  input.addEventListener('click', function() {
+  input.addEventListener('click', () => {
     event.stopPropagation();
   });
 
@@ -67,24 +63,22 @@ function main () {
 
   // -------- timer --------
 
-  var timeLeft = 30;
-  var p = document.createElement('p');
+  let timeLeft = 30;
+  const p = document.createElement('p');
+  const timer = document.querySelector('.display-timer');
+  timer.appendChild(p);
   
   console.log(timeLeft);
-  var intervalId = setInterval(function() {
-    p.innerText= timeLeft;
+  const intervalId = setInterval(() => {
     if (timeLeft) {
       timeLeft--;
+      p.innerText= timeLeft;
       console.log(timeLeft)
     } else {
       clearInterval(intervalId);
     }
-    var timer = document.querySelector('.displayTimer');
-    timer.appendChild(p);
   }, 1000);
-
-
 }
 
-window.addEventListener('load', main);
 
+window.addEventListener('load', main);
