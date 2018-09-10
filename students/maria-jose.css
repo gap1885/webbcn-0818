@@ -120,14 +120,18 @@ nav {
   background-color: #9EB4BD;
 }
 
-.displayTimer {
+.display-timer {
   width: 100%;
   color: #CEA097;
   border: 1px solid #ebebeb;
   background-color: white;
   text-align: center;
-  padding: 10px;
+  padding: 0;
   border-radius: 4px;
+}
+
+.display-timer p {
+  margin: 0;
 }
 
 /* profile */
