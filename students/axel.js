@@ -35,7 +35,7 @@ const main = () => {
 //----DROP DOWN MENU----//
 
   const findStudents = term => {
-    const results = [];
+    let results = [];
     if (term) {
       results = students.filter( item => {
         const name = item.name.toUpperCase();
