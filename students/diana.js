@@ -1,39 +1,42 @@
 'use strict';
 
-function main() {
+const main = () => {
 
-  var nodes = document.querySelectorAll('section.experiments h3');
+  const nodes = document.querySelectorAll('section.experiments h3');
 
-  for (var ix = 0; ix < nodes.length; ix++) {
-    nodes[ix].addEventListener('click', function (event) {
-      var h3 = event.currentTarget;
-      var div = h3.parentNode;
-      var technologies = div.querySelector('.articles');
+  for (let ix = 0; ix < nodes.length; ix++) {
+    nodes[ix].addEventListener('click',  event => {
+      const h3 = event.currentTarget;
+      const div = h3.parentNode;
+      const technologies = div.querySelector('.articles');
       technologies.classList.toggle('hidden')
     });
   }
-  
-  function findStudents(terms) {
-    var results = [];
+
+
+  const findStudents = (terms) => {
+    let results = [];
     if (terms) {
-      results = students.filter(function (student) {
+      results = students.filter(student => {
         return student.name.toLowerCase().indexOf(terms) >=0;
       });
     } 
     return results;
   }
 
-  var searchResults = document.querySelector('.quick-nav .results');
 
-  function displayResults(results) {
+
+  const searchResults = document.querySelector('.quick-nav .results');
+
+  const displayResults = results => {
     searchResults.innerHTML = '';
 
-    var ul = document.createElement('ul');
+    const ul = document.createElement('ul');
 
     results.forEach(function (student) {
-      var link = document.createElement('a');
+      const link = document.createElement('a');
 
-      var li = document.createElement('li');
+      const li = document.createElement('li');
 
       link.innerText = student.name;
       link.setAttribute('href', '../' + student.url);
@@ -43,43 +46,37 @@ function main() {
     searchResults.appendChild(ul)
   }
 
-  function handleChange() {
-    var searchTerms = input.value;
-    var results = findStudents(searchTerms);
+  const handleChange = () => {
+    const searchTerms = input.value;
+    const results = findStudents(searchTerms);
     displayResults(results);
   }
 
-  var input = document.querySelector('div.searchbox input');
-  
+  const input = document.querySelector('div.searchbox input');
   input.addEventListener('keyup', handleChange);    
 
-  document.body.addEventListener('click',function() {
-    searchResults.innerHTML = '';
-  });
+  document.body.addEventListener('click',() => searchResults.innerHTML = '');
   
-  document.body.addEventListener('keyup',function(event) {
+  document.body.addEventListener('keyup', event => {
     event.preventDefault;
     if (event.key === 'Escape') {
       searchResults.innerHTML = '';
     }
-
   });
 
-  input.addEventListener('click',function(event) {
-    event.stopPropagation();    
-  });
+  input.addEventListener('click', event => event.stopPropagation());
   
   input.addEventListener('focus', handleChange);
   
   //  ---- code counter ---//
 
-  var timeLeft = 30;
-  var timer = document.querySelector('.counter');
-  var countDown = document.createElement('span');
+  let timeLeft = 30;
+  const timer = document.querySelector('.counter');
+  const countDown = document.createElement('span');
   countDown.innerText = timeLeft;
 
 
-  var counertId = setInterval(function() {
+  let counertId = setInterval(() => {
     if (timeLeft) {
       timeLeft--;
     } else {
@@ -89,24 +86,22 @@ function main() {
   }, 3000);
 
   timer.appendChild(countDown);
-
-
-  
 };
 
-var lost = document.createElement('div');
-div.innerHTML = `
-  <main>
-    <div class = "lost">
-      <h2>You've lost!</h3>
-      <img src="https://i.pinimg.com/originals/08/68/ab/0868ab440ea76d859e625d117fd821a0.gif" alt="" width="50%" >
-    <div>
-  </main>
-`;
+// var lost = document.createElement('div');
+// div.innerHTML = `
+//   <main>
+//     <div class = "lost">
+//       <h2>You've lost!</h3>
+//       <img src="https://i.pinimg.com/originals/08/68/ab/0868ab440ea76d859e625d117fd821a0.gif" alt="" width="50%" >
+//       <button><a href="diana.html">Meh take me back</a></button>
+//       <div>
+//   </main>
+// `;
 
-document.body.appendChild(div);
+// document.body.appendChild(div);
 
 
 
 
-window.addEventListener('load',main)
+window.addEventListener('load', main);
