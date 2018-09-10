@@ -1,18 +1,18 @@
 'use strict'
 
-function main() {
+const main = () => {
 
   // - show hide experiments
 
-  var nodes = document.querySelectorAll('article.card h4');
+  const nodes = document.querySelectorAll('article.card h4');
 
-  for (var ix = 0; ix < nodes.length; ix++) {
-    nodes[ix].addEventListener('click', function (event) {
-      var h4 = event.currentTarget;
-      var article = h4.parentNode;
-      var content = article.querySelector('.content');
-      var expandArrow = article.querySelector('.expand');
-      var collapseArrow = article.querySelector('.collapse')
+  for (let ix = 0; ix < nodes.length; ix++) {
+    nodes[ix].addEventListener('click', (event) => {
+      const h4 = event.currentTarget;
+      const article = h4.parentNode;
+      const content = article.querySelector('.content');
+      const expandArrow = article.querySelector('.expand');
+      const collapseArrow = article.querySelector('.collapse')
       content.classList.toggle('hide');
       expandArrow.classList.toggle('hide');
       collapseArrow.classList.toggle('hide');
@@ -21,56 +21,57 @@ function main() {
 
   // - student search
 
-  function findStudents(terms) {
-    var results = [];
+  const findStudents = (terms) => {
+    const results = [];
     
     if (terms) {
-      results = students.filter(function (student) {
+      results = students.filter((student) => {
         return student.name.toLowerCase().indexOf(terms) >= 0;
       });
     };
     return results;
   };
 
-  function displayResults(results) {
-    var searchResults = document.querySelector('.quick-nav .search-results');
+ const displayResults = (results) => {
+    const searchResults = document.querySelector('.quick-nav .search-results');
     searchResults.innerHTML = '';
 
-    var ul = document.createElement('ul');
-    results.forEach(function (student) {
-      var link = document.createElement('a');
+    const ul = document.createElement('ul');
+    results.forEach( (student) => {
+      const link = document.createElement('a');
       link.innerText = student.name;
-      link.setAttribute('href', '../' + student.url);
+      // link.setAttribute('href', '../' + student.url); ES 5, from now ES6 interpolation!
+      link.setAttribute('href', `../${student.url}`); 
 
-      var li = document.createElement('li');
+      const li = document.createElement('li');
       li.appendChild(link);
       ul.appendChild(li);
     });
     searchResults.appendChild(ul);
   };
 
-  function handleChange() {
-    var searchTerms = input.value.toLowerCase();
-    var results = findStudents(searchTerms);
+  const handleChange = () => {
+    const searchTerms = input.value.toLowerCase();
+    const results = findStudents(searchTerms);
     displayResults(results);
   };
 
-  var input = document.querySelector('.quick-nav .search input');
+  const input = document.querySelector('.quick-nav .search input');
   input.addEventListener('keyup', handleChange);
 
-  var searchResults = document.querySelector('.quick-nav .search-results');
+  const searchResults = document.querySelector('.quick-nav .search-results');
 
-  document.body.addEventListener('click', function() {
+  document.body.addEventListener('click', () => {
     searchResults.innerHTML = '';
   });
 
-  input.addEventListener('click', function(event) {
+  input.addEventListener('click', (event) => {
     event.stopPropagation();
   });
 
   input.addEventListener('focus', handleChange);
 
-  document.addEventListener('keyup', function(e) {
+  document.addEventListener('keyup', (e) => {
     if (e.keyCode == 27) { 
       searchResults.innerHTML = '';
     } 
@@ -82,7 +83,7 @@ function main() {
   
   // playButton.addEventListener('click', countDown);
 
-  // function countDown(counter) {
+  //  countDown(counter) {
   //   playButton.removeEventListener('click', countDown);
 
   //   var description = document.querySelector('.game .description');

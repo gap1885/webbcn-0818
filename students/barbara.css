@@ -307,6 +307,10 @@ section.experiments .card {
     margin-bottom: 30px;
     width: 450px;
 }
+
+section.experiments>p {
+    text-decoration: none;
+}
   
 /* quick-nav */
 .quick-nav {
