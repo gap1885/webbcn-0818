@@ -1,126 +1,105 @@
 'use strict';
 
-
-function buildDom(html) {
-  var div = document.createElement('div');
+const buildDom = html => {
+  const div = document.createElement('div');
   div.innerHTML = html;
   return div.children[0];
 }
 
-function main() {
+const main = () => {
 
 //-----EXPERIMENTS----//
 
-  var nodes1 = document.querySelectorAll('.list-articles h4');
-  for (var ix = 0; ix < nodes1.length; ix++) {
-    nodes1[ix].addEventListener('click', function(event) {
-      var h4 = event.currentTarget;
-      var article = h4.parentNode;
-      var content = article.querySelector('div');
+  const nodes1 = document.querySelectorAll('.list-articles h4');
+  for (let ix = 0; ix < nodes1.length; ix++) {
+    nodes1[ix].addEventListener('click', event => {
+      const h4 = event.currentTarget;
+      const article = h4.parentNode;
+      const content = article.querySelector('div');
       content.classList.toggle('hide');
     });
   };
 
 //-----BUTTON-----//
 
-  var mainButton = document.querySelector('.site-nav .button');
-    mainButton.addEventListener('mouseover', function(event) {
-      event.target.classList.toggle('button-inverted');
-    });
-    mainButton.addEventListener('mouseout', function(event) {
-      event.target.classList.toggle('button-inverted');
-    });
+  const mainButton = document.querySelector('.site-nav .button');
+  mainButton.addEventListener('mouseover', event => event.target.classList.toggle('button-inverted'));
+  mainButton.addEventListener('mouseout', event => event.target.classList.toggle('button-inverted'));
 
-  var secondaryButton = document.querySelectorAll('.list-articles a');
-  for (var ix = 0; ix < secondaryButton.length; ix++) {
-    secondaryButton[ix].addEventListener('mouseover', function(event) {
-      event.target.classList.toggle('button-inverted');
-    });
-    secondaryButton[ix].addEventListener('mouseout', function(event) {
-      event.target.classList.toggle('button-inverted');
-    });
+  const secondaryButton = document.querySelectorAll('.list-articles a');
+  for (let ix = 0; ix < secondaryButton.length; ix++) {
+    secondaryButton[ix].addEventListener('mouseover', event => event.target.classList.toggle('button-inverted'));
+    secondaryButton[ix].addEventListener('mouseout', event => event.target.classList.toggle('button-inverted'));
   };
 
 //----DROP DOWN MENU----//
 
-  function findStudents(term) {
-    var results = [];
-    if (term){
-      results = students.filter(function(item) {
-        var name = item.name.toUpperCase();
-        if (name.indexOf(term) !== -1) {
-          return true;
-        }
+  const findStudents = term => {
+    const results = [];
+    if (term) {
+      results = students.filter( item => {
+        const name = item.name.toUpperCase();
+        if (name.indexOf(term) !== -1) { return true; }
       });
     };
     return results;
   };
 
-  function displayResults(results) {
+  const displayResults = results => {
     searchResult.innerHTML = '';
-    var ul = document.createElement('ul');
-    results.forEach(function (student) {
-      var link = document.createElement('a');
+    const ul = document.createElement('ul');
+    results.forEach( student => {
+      const link = document.createElement('a');
       link.innerText = student.name;
       link.setAttribute('href', '../' + student.url);
-      var li = document.createElement('li');
+      const li = document.createElement('li');
       li.appendChild(link);
       ul.appendChild(li);
     });
     searchResult.appendChild(ul);
   };
 
-  function handleChange() {
-    var searchTerms = input.value.toUpperCase();
-    var results = findStudents(searchTerms);
+  const handleChange = () => {
+    const searchTerms = input.value.toUpperCase();
+    const results = findStudents(searchTerms);
     displayResults(results);
   };
 
-  var input = document.querySelector('.input-student input');
+  const input = document.querySelector('.input-student input');
   input.addEventListener('keyup', handleChange);
 
-  var searchResult = document.querySelector('.search-results'); 
-  document.body.addEventListener('click', function() {
-    searchResult.innerHTML = '';
-  });
+  const searchResult = document.querySelector('.search-results'); 
+  document.body.addEventListener('click', () => searchResult.innerHTML = '');
 
-  document.querySelector('.input-student input').addEventListener('click', function(event) {
-    event.stopPropagation(event);
-  });
+  document.querySelector('.input-student input').addEventListener('click', event => event.stopPropagation(event));
 
-  document.body.addEventListener('keyup', function() {
-    if (event.key === 'Escape') {
-      searchResult.innerHTML = '' 
-    }
+  document.body.addEventListener('keyup', () => {
+    if (event.key === 'Escape') { searchResult.innerHTML = '' }
   });
 
   document.querySelector('.input-student input').addEventListener('focus', handleChange);
 
 //-----TIMER-----//
 
-  var time = 30;
-  var p = document.createElement('p');
+  let time = 30;
+  const p = document.createElement('p');
   p.classList.add('button');
   p.classList.add('timer');
   p.innerText = time;
   document.querySelector('.main-image').appendChild(p);
-  var timerId = setInterval(function() {
+  const timerId = setInterval( () => {
     time -- ;
-    if (time === 0) {
-      clearInterval(timerId);
-    }
+    if (time === 0) { clearInterval(timerId); }
     p.innerText = time;
   }, 1000);
   
-  p.addEventListener('click', function() {
-    clearInterval(timerId); 
-  });
+  p.addEventListener('click', () => clearInterval(timerId));
 
   //------GAMES-----//
-  var playButton = document.querySelector('.play');
-  var frame;
+  const playButton = document.querySelector('.play');
+  let frame;
 
-  playButton.addEventListener('click', function() {
+  playButton.addEventListener('click', () => {
     frame = buildDom(
       `<div class="canvas-game">
         <a class="close-icon"><img src="https://image.flaticon.com/icons/svg/148/148766.svg"></a>
@@ -129,16 +108,12 @@ function main() {
     );
     
     document.querySelector('.experiments').appendChild(frame);
-    var cross = document.querySelector('.close-icon')
+    const cross = document.querySelector('.close-icon')
     cross.addEventListener('click', destroyGame)
 
   });
 
-  function destroyGame() {
-    if(frame){
-      frame.remove();
-    }
-  }
+  const destroyGame = () => { if (frame) frame.remove() };
 
 } // End of main()
 
